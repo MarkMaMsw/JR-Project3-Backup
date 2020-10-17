@@ -24,16 +24,8 @@ function Example() {
                     imgPath={require("../../images/shoes/4d-run-1.0-parley-shoes.png")}
                     buyGoto="/product"
                     imgGoto="/product"
-                    newBackgroundStyle='background-image: linear-gradient(
-                        to bottom right,
-                        #91d5ff 0%,
-                        #ffd591 100%
-                    );'
-                    newCircleStyle="background-image: linear-gradient(
-                        to top left,
-                        #69c0ff 0%,
-                        #b7eb8f 100%
-                    );" />
+                    newBackgroundStyle='background-image: linear-gradient(to bottom right, #91d5ff 0%, #ffd591 100%);'
+                    newCircleStyle="background-image: linear-gradient(to top left, #69c0ff 0%, #b7eb8f 100%);" />
             </div>
         </>
     );
