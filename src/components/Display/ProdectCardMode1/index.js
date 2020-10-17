@@ -27,13 +27,14 @@ class _ProdectCardMode1 extends React.Component {
         const box = ReactDOM.findDOMNode(this.box.current);
         const circle = ReactDOM.findDOMNode(this.circle.current);
 
-        // const buy = ReactDOM.findDOMNode(this.buy.current);
+        const buy = ReactDOM.findDOMNode(this.buy.current);
         // const name = ReactDOM.findDOMNode(this.name.current);
         // const imgPath = ReactDOM.findDOMNode(this.imgPath.current);
 
         if (newStyle) container.style.cssText = newStyle;
-        if (newCircleStyle) circle.style.cssText = newCircleStyle;
+        if (newCircleStyle) { circle.style.cssText = newCircleStyle; buy.style.cssText = newCircleStyle; }
         if (newBackgroundStyle) box.style.cssText = newBackgroundStyle;
+
         if (name) this.setState({ name })
         if (buyNow) this.setState({ buyNow })
         VanillaTilt.init(box, {
