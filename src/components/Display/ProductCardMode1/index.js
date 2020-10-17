@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import ReactDOM from "react-dom";
 import VanillaTilt from "vanilla-tilt"
 
-class _ProdectCardMode1 extends React.Component {
+class _ProductCardMode1 extends React.Component {
     constructor() {
         super();
         this.container = React.createRef();
@@ -68,6 +68,6 @@ class _ProdectCardMode1 extends React.Component {
 
 }
 
-const ProdectCardMode1 = withRouter(_ProdectCardMode1);
+const ProductCardMode1 = withRouter(_ProductCardMode1);
 
-export { ProdectCardMode1 };
+export { ProductCardMode1 };
