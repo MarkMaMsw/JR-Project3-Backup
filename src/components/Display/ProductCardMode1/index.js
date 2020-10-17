@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import ReactDOM from "react-dom";
 import VanillaTilt from "vanilla-tilt"
 
-class _ProdectCardMode1 extends React.Component {
+class _ProductCardMode1 extends React.Component {
     constructor() {
         super();
         this.container = React.createRef();
@@ -27,13 +27,14 @@ class _ProdectCardMode1 extends React.Component {
         const box = ReactDOM.findDOMNode(this.box.current);
         const circle = ReactDOM.findDOMNode(this.circle.current);
 
-        // const buy = ReactDOM.findDOMNode(this.buy.current);
+        const buy = ReactDOM.findDOMNode(this.buy.current);
         // const name = ReactDOM.findDOMNode(this.name.current);
         // const imgPath = ReactDOM.findDOMNode(this.imgPath.current);
 
         if (newStyle) container.style.cssText = newStyle;
-        if (newCircleStyle) circle.style.cssText = newCircleStyle;
+        if (newCircleStyle) { circle.style.cssText = newCircleStyle; buy.style.cssText = newCircleStyle; }
         if (newBackgroundStyle) box.style.cssText = newBackgroundStyle;
+
         if (name) this.setState({ name })
         if (buyNow) this.setState({ buyNow })
         VanillaTilt.init(box, {
@@ -67,6 +68,6 @@ class _ProdectCardMode1 extends React.Component {
 
 }
 
-const ProdectCardMode1 = withRouter(_ProdectCardMode1);
+const ProductCardMode1 = withRouter(_ProductCardMode1);
 
-export { ProdectCardMode1 };
+export { ProductCardMode1 };
