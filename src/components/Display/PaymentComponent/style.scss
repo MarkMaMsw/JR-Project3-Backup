@@ -1,0 +1,71 @@
+$title-text-color:lighten(#A5A8B1, 20%);
+$label-text-color: #A5A8B1;
+$input-text-color: lighten(#A5A8B1, 25%);
+$background-color: #2E3749;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: block;
+
+}
+
+.payment {
+    border: 1px solid green;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3em 0;
+    &__show-list {
+        border: 1px solid red;
+        width: 35%;
+    }
+    &__checkout-panel {
+        border: 1px solid red;
+        background-color: $background-color;
+        width: 20%;
+        padding: 3em 3.5em;
+        border-radius: 10px;
+    }
+    &__title {
+        color: $title-text-color;
+        font-weight: 600;
+        font-size: 2.2em;
+        letter-spacing: 2px;
+        margin-bottom: 2.5em;
+    }
+    &__detail {
+        margin-bottom: 0.8em;
+        label {
+            display: block;
+            color: $label-text-color;
+            margin-bottom: 0.5em;
+            font-size: 1.2em;
+        }
+        input {
+            background-color: $background-color;
+            color: $input-text-color;
+            font-size: 1.4em;
+            border: none;
+            border-bottom: 1px solid $title-text-color;
+            line-height: 1.7em;
+            width: 100%;
+        }
+    }
+    &__details--basic {
+        margin-bottom: 4em;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        div {
+            width: 80%;
+        }
+    }
+
+}
+
+
+
