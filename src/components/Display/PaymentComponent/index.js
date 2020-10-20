@@ -1,14 +1,45 @@
 import React from 'react'
 import './style.scss'
 import FormField from './FormField'
+import CheckoutButton from '../../Basic/Button/CheckoutButton/CheckoutButton'
+// import region-selector api for region input field
+import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
+import { CardElement,CardNumberElement, CardCvcElement, CardExpiryElement } from '@stripe/react-stripe-js'
 
+const cardElementOption = {
+    style: {
+        base: {
+            fontSize: '1.05em',
+            color: '#e9eaec',
+            lineHeight: '2.3em',
+            '::placeholder': {
+                fontSize: '1.05em'
+            }
+        },
+        invalid: {
+            color: "#fa755a",
+            iconColor: "#fa755a",
+        }
+    },
+    hidePostalCode: true
+}
 
 class PaymentComponent extends React.Component{
     constructor() {
         super()
+        this.state = {
+            fullname: '',
+            phone: '',
+            email: '',
+            country: '',
+            region: '',
+            address: '',
+            nameOnCard: ''
+        }
     }
 
     render() {
+        const { fullname, phone, email, country, region, address, nameOnCard } = this.state;
         return <div className="payment">
             <div className="payment__show-list"></div>
             <div className="payment__checkout-panel">
@@ -18,6 +49,8 @@ class PaymentComponent extends React.Component{
                         name="fullname"
                         label="Full name"
                         type="text"
+                        value={fullname}
+                        onChange={this.handleChange}
                         placeholder="Jane Doe"
                         required
                     />
@@ -25,6 +58,8 @@ class PaymentComponent extends React.Component{
                         name="phone"
                         label="Phone number"
                         type="text"
+                        value={phone}
+                        onChange={this.handleChange}
                         placeholder="0402182222"
                         required
                     />
@@ -32,31 +67,34 @@ class PaymentComponent extends React.Component{
                         name="email"
                         label="Email address"
                         type="text"
+                        value={email}
+                        onChange={this.handleChange}
                         placeholder="Thomas@gmail.com"
                         required
                     />
                 </div>
                 <div className="payment__details--address">
                     <div className="payment__container">
-                        <FormField
-                            name="state"
-                            label="State"
-                            type="text"
-                            placeholder="Queensland"
-                            required
-                        />
-                        <FormField
-                            name="city"
-                            label="City"
-                            type="text"
-                            placeholder="Brisbane"
-                            required
-                        />
+                        <div className="payment__region payment__region--country">
+                            <label>Country</label>    
+                            <CountryDropdown
+                            value={country}
+                            onChange={(val) => this.selectCountry(val)} />
+                        </div>
+                        <div className="payment__region payment__region--state">
+                            <label>State</label>
+                            <RegionDropdown
+                            country={country}
+                            value={region}
+                            onChange={(val) => this.selectRegion(val)} />
+                        </div>
                     </div>
                     <FormField
                         name="address"
                         label="Address"
                         type="text"
+                        value={address}
+                        onChange={this.handleChange}
                         placeholder="61 Warren st, St Lucia"
                         required
                     />
@@ -68,34 +106,41 @@ class PaymentComponent extends React.Component{
                     <FormField
                         name="name-on-card"
                         label="Name on card"
+                        value={nameOnCard}
+                        onChange={this.handleChange}
                         type="text"
                         placeholder="Jane Doe"
                         required
                     />
-                    <FormField
-                        name="card-number"
-                        label="Card number"
-                        type="text"
-                        placeholder=""
-                        required
-                    />
-                    <FormField
-                        name="date"
-                        label="Date"
-                        type="text"
-                        placeholder=""
-                        required
-                    />
-                    <FormField
-                        name="ccv"
-                        label="CCV"
-                        type="text"
-                        placeholder=""
-                        required
-                    />
+                    <div className="payment__detail payment__detail-card">
+                        <label>Card Info</label>
+                        <CardElement options={cardElementOption} />
+                    </div>
+                </div>
+                <div className="payment__checkout-button">
+                    <CheckoutButton/>
                 </div>
             </div>
+            
         </div>
+    }
+
+    selectCountry (val) {
+        this.setState({ country: val });
+    }
+     
+    selectRegion (val) {
+    this.setState({ region: val });
+    }
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    handleCheckout = (e) => {
+        e.preventDefault()
     }
 }
 
