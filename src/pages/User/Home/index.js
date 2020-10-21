@@ -1,11 +1,12 @@
 import React from 'react';
-// import Style from "./style.module.scss"
+
 
 function Home() {
   return (
-    <>
-      Home
-    </>
+    <div>123</div>
+    // <React.Fragment>
+    //   123
+    //   </React.Fragment>
   );
 }
 
