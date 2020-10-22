@@ -1,12 +1,14 @@
 import React from 'react';
+import {NavBar} from '../../../components/Display/NavBar/index'
+// import NavBar from '../../components/Display/NavBar/index';
 
 
 function Home() {
   return (
-    <div>123</div>
-    // <React.Fragment>
-    //   123
-    //   </React.Fragment>
+    <React.Fragment>
+      <NavBar/>
+      {/* <Login/> */}
+    </React.Fragment>
   );
 }
 
