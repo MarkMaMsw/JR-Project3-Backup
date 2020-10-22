@@ -29,10 +29,11 @@ class CategorySquareCard1 extends React.Component{
                     </div>
                     <div>
                         <div className = {Style.productInfo}>
-                            <h4 className = {Style.productPrice}>$ {price}</h4>
                             <h4>{name}</h4>
+                            <h4 className = {Style.productPrice}>$ {price}</h4>
+                            
                         </div>
-                        <div>
+                        <div className = {Style.productExtraInfo}>
                             <h4 className={Style.productColor}>{numofColor} COLORS</h4>
                         </div>
                     </div>
