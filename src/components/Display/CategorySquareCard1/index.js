@@ -1,12 +1,13 @@
 import React from 'react'
-// import Css from "./style.module.css";
+import Style from "./style.module.scss"
 import { withRouter } from 'react-router-dom';
 import ReactDOM from "react-dom";
+
 
 class CategorySquareCard1 extends React.Component{
     constructor(){
         super();
-
+        this.imgPath = React.createRef();
         this.state = {
             name: "Product Name",
             price: 0,
@@ -17,18 +18,24 @@ class CategorySquareCard1 extends React.Component{
     render(){
         const {name, price, numofColor} = this.props;
         return <>
-        <div>
-            <div>
-                <img />
-                <div></div>
-            </div>
-            <div>
-                <div>
-                    <h3>{name}</h3>
-                    <h3>$ {price}</h3>
-                </div>
-                <div>
-                    <h4>{numofColor} COLORS</h4>
+        <div className = "container">
+            <div className = "row">
+                <div className = "col-md-3 col-xs-6 col-sm-4">
+                    <div className = {Style.productContainer}>
+                        <div>
+                            <img ref={this.imgPath} src={this.props.imgPath} alt="shoes" className={Style.product}  />
+                        </div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div className = {Style.productInfo}>
+                            <h4 className = {Style.productPrice}>$ {price}</h4>
+                            <h4>{name}</h4>
+                        </div>
+                        <div>
+                            <h4 className={Style.productColor}>{numofColor} COLORS</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

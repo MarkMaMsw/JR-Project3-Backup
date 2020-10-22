@@ -7,6 +7,19 @@ function Product() {
         <>
             <CategorySquareCard1 
                 name = "Ultraboost 20 Shoes"
+                imgPath={require("../../../images/shoes/ultraboost-20-shoes.png")}
+                price = "340"
+                numofColor = "8"
+            />
+            <CategorySquareCard1 
+                name = "Ultraboost 20 Shoes"
+                imgPath={require("../../../images/shoes/ultraboost-20-shoes.png")}
+                price = "340"
+                numofColor = "8"
+            />
+            <CategorySquareCard1 
+                name = "Ultraboost 20 Shoes"
+                imgPath={require("../../../images/shoes/ultraboost-20-shoes.png")}
                 price = "340"
                 numofColor = "8"
             />
