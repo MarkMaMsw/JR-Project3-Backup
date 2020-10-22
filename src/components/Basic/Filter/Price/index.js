@@ -1,5 +1,15 @@
 import React from 'react';
 import Slider from '@material-ui/core/Slider';
+import Style from './style.module.scss';
+import ReactDOM from "react-dom";
+import { makeStyles } from '@material-ui/core/styles';
+
+
+const useStyles = makeStyles({
+  root: {
+    width: 150,
+  }
+})
 
 
 function valuetext(value) {
@@ -7,6 +17,7 @@ function valuetext(value) {
 }
 
 function PriceSlider() {
+  const classes = useStyles();
   const [value, setValue] = React.useState([0, 500]);
 
   const updateRange = (e, newValue) => {
@@ -14,18 +25,53 @@ function PriceSlider() {
   }
 
   return (
-    <div>
+    <div className={classes.root}>
       <h3>Price</h3>
       <Slider 
         value={value}
         onChange={updateRange}
         valueLabelDisplay='auto'
-        // aria-labelledby="range-slider"
-        // getAriaLabel={valuetext}
+        aria-labelledby="range-slider"
+        getAriaLabel={valuetext}
         max={1000}
       />
     </div>
   )
 }
+
+
+// class PriceSlider extends React.Component {
+//   constructor() {
+//     super()
+//     this.state = {
+//       value: [100, 1000],
+//     }
+
+//   }
+
+//   updateRange = (newValue) => {
+//     this.setState({
+//       value: newValue
+//     })
+//   }
+
+
+
+//   render() {
+//     const { value, updateRange } = this.state;
+//     return(
+//       <div ref={this.container} className={Style.container}>
+//         <h3>Price</h3>
+//           <Slider 
+//               value={value}
+//               onChange={updateRange}
+//               valueLabelDisplay='auto'
+//               aria-labelledby="range-slider"
+//               // getAriaLabel={valuetext}
+//               max={1000}
+//           />
+//     </div>)
+//   }
+// }
 
 export default PriceSlider;
