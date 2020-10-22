@@ -1,7 +1,8 @@
 .searchContainer{
     display:flex;
-    position: relative;
-    border-radius:10px;
+    align-items: center;
+    height:3vh;
+    border-radius:15px;
     background-color: rgb(243, 237, 237);
     padding-right:10px;
 }

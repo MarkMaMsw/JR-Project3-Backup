@@ -12,8 +12,8 @@ import Link from '@material-ui/core/Link';
 class _NavSearch extends React.Component {
     render() {
         return (
-            <div className={Style.searchContainer}>
-                <Link href="#" className={Style.searchContainer_icon}><SearchIcon/></Link>
+            <div size="large" className={Style.searchContainer}>
+                <Link href="#" className={Style.searchContainer_icon} ><SearchIcon/></Link>
                 <input className={Style.searchContainer_inputBox} type="text" color='gray' placeholder='search' />
             </div>
         )

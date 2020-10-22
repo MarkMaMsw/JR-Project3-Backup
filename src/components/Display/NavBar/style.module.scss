@@ -1,15 +1,28 @@
-.container{
+.navContainer{
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
     align-items:center;
+    background-color: rgb(250, 249, 249) ;
 }
+.rightContainer{
+    display:flex;
+    align-items:center;
+    align-content: center;
+}
+
 .logo{
-    display:inline-block;
-    float: left;
-    width:40px;
+    width:5vh;
 }
 
 .icon{
+    display:inline-block;
     height:24px;
+}
+.empty{
+    width:4vh
+}
+
+.empty2{
+    width:1vh
 }
