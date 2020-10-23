@@ -19,7 +19,7 @@ class CategorySquareCard1 extends React.Component{
     render(){
         const {name, price, numofColor} = this.props;
         return <>
-        <div className = "container">
+        <div className = {Style.container}>
             <div className = "row">
                 <div className = "col-md-3 col-xs-6 col-sm-4">
                     <div className = {Style.productContainer}>

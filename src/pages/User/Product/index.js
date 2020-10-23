@@ -26,12 +26,25 @@ function Product() {
             /> */}
 
 
-            <ProductRectangleCard1 
+            {/* <ProductRectangleCard1 
                 name = "Red Bag Awesome"
                 imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
                 price = "20.0"
                 rate = "4.5"
             />
+             <ProductRectangleCard1 
+                name = "Red Bag Awesome"
+                imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
+                price = "20.0"
+                rate = "4.5"
+            />
+             <ProductRectangleCard1 
+                name = "Red Bag Awesome"
+                imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
+                price = "20.0"
+                rate = "4.5"
+            /> */}
+            
 
 
         </>
