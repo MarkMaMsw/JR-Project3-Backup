@@ -19,6 +19,8 @@
     transform: rotate(-30deg);
     width: 250px;
     // box-shadow: 1px 10px 10px #888888;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
 }
 
 .productInfo{
@@ -50,7 +52,6 @@
     color: #878282;
     font-size: 0.8rem;
 }
-
 
 
 //ClearFix

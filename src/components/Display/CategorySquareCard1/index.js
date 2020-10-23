@@ -27,7 +27,7 @@ class CategorySquareCard1 extends React.Component{
                             <img ref={this.imgPath} src={this.props.imgPath} alt="shoes" className={Style.product}  />
                         </div>
                         <div className = {Style.bagIcon}>
-                            <LocalMallIcon  style={{ color: "white" }} />
+                            <LocalMallIcon  style={{ color: "white" , margin:"10px"}} />
                         </div>
                     </div>
                     <div>
