@@ -7,6 +7,8 @@
     position: relative;
     width: 300px;
     height: 300px;
+    display: flex;
+    flex-wrap: wrap;
     background:rgba(191, 235, 172, 0.4);
 }
 
@@ -38,14 +40,6 @@
     bottom: 10%;
     right: -8%;
 }
-
-//ClearFix
-// .productPrice::after{
-//     content: "";
-//     clear: both;
-//     display: table;
-// }
-
 .productExtraInfo{
     position: relative;
     padding-bottom: 10px;
@@ -56,3 +50,13 @@
     color: #878282;
     font-size: 0.8rem;
 }
+
+
+
+//ClearFix
+// .productPrice::after{
+//     content: "";
+//     clear: both;
+//     display: table;
+// }
+

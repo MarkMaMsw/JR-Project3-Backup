@@ -1,0 +1,31 @@
+.rec_productContainer{
+    border: 1px solid black;
+    margin: 20px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 750px;
+    height: 450px;
+}
+
+.rec_productContainer .imgContainer .rec_Product{
+    position:absolute;
+    top: 30%;
+    right: 5%;
+    transform: rotate(-30deg);
+    width: 400px;
+}
+
+.rec_productInfo .mainrec_Name{
+    padding-left: 30px;
+    padding-top: 20px;
+    width: 300px;
+    font-size: 4rem;
+    color: rgb(255, 148, 56);
+}
+
+.rec_productInfo .mainrec_Price{
+    padding-left: 30px;
+    font-size: 2.5rem;
+    color: rgb(255, 195, 115);
+}

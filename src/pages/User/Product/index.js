@@ -3,6 +3,7 @@ import React from 'react';
 import CategorySquareCard1 from "../../../components/Display/CategorySquareCard1/index"
 import ProductRectangleCard1 from "../../../components/Display/ProductRectangleCard1/index"
 import ProductRectangleCard2 from "../../../components/Display/ProductRectangleCard2/index"
+import MainRectangleCard1 from "../../../components/Display/MainRectangleCard1/index"
 function Product() {
     return (
         <>
@@ -69,7 +70,11 @@ function Product() {
             
             />  */}
 
-
+            <MainRectangleCard1 
+            name = "NIKE BLAZER MID"
+            imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
+            price = "260"
+            />
 
 
 
