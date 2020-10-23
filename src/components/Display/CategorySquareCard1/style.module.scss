@@ -1,10 +1,10 @@
 .container{
     margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .productContainer{
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
     width: 300px;
     height: 300px;
     background:rgba(191, 235, 172, 0.4);

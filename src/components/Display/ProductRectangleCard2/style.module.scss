@@ -1,0 +1,56 @@
+.rec_productContainer{
+    margin: 20px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 330px;
+    height: 120px;
+    // background: rgba(227, 85, 152, 0.2);
+    border-radius: 20px;
+}
+
+.rec_productContainer .imgContainer{
+    width: 130px;
+    height: 120px;
+    background: rgba(255, 148, 56, 0.2);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.rec_productContainer .rec_Product{
+    position:absolute;
+    top: 30%;
+    left: -10%;
+    transform: rotate(-30deg);
+    width: 150px;
+}
+
+.rec_productContainer .rec_productInfo{
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
+.rec_productContainer .rec_productColor{
+    color: #878282;
+    font-size: 0.8rem;
+}
+
+.plusIcon{
+    position: absolute;
+    box-shadow: -1px -1px 3px 0px #E1E1E1;
+    border: 1px solid white;
+    bottom: 0%;
+    right: 0%;
+    width: 60px;
+    height: 40px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.rec_productContainer .addIcon{
+    line-height: 40px;
+    height: 40px;
+    font-size: 1.8rem;
+    position: absolute;
+    right: 25%;
+}

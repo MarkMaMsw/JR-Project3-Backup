@@ -2,7 +2,7 @@ import React from 'react';
 // import Style from "./style.module.scss"
 import CategorySquareCard1 from "../../../components/Display/CategorySquareCard1/index"
 import ProductRectangleCard1 from "../../../components/Display/ProductRectangleCard1/index"
-
+import ProductRectangleCard2 from "../../../components/Display/ProductRectangleCard2/index"
 function Product() {
     return (
         <>
@@ -45,6 +45,32 @@ function Product() {
                 rate = "4.5"
             /> */}
             
+            {/* <ProductRectangleCard2 
+            name = "Red Bag Awesome"
+            imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
+            price = "185"
+            numofColor = "8"
+            
+            /> 
+
+            <ProductRectangleCard2 
+            name = "Red Bag Awesome"
+            imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
+            price = "185"
+            numofColor = "8"
+            
+            /> 
+
+            <ProductRectangleCard2 
+            name = "Red Bag Awesome"
+            imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
+            price = "185"
+            numofColor = "8"
+            
+            />  */}
+
+
+
 
 
         </>
