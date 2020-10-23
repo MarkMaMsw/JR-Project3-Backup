@@ -2,6 +2,7 @@ import React from 'react'
 import Style from "./style.module.scss"
 import { withRouter } from 'react-router-dom';
 import ReactDOM from "react-dom";
+import LocalMallIcon from '@material-ui/icons/LocalMall';
 
 
 class CategorySquareCard1 extends React.Component{
@@ -25,7 +26,9 @@ class CategorySquareCard1 extends React.Component{
                         <div>
                             <img ref={this.imgPath} src={this.props.imgPath} alt="shoes" className={Style.product}  />
                         </div>
-                        <div></div>
+                        <div className = {Style.bagIcon}>
+                            <LocalMallIcon  style={{ color: "white" }} />
+                        </div>
                     </div>
                     <div>
                         <div className = {Style.productInfo}>
