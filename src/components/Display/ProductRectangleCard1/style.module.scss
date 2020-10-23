@@ -1,4 +1,4 @@
-.productContainer{
+.rec_productContainer{
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -6,4 +6,47 @@
     height: 120px;
     background: rgba(255, 148, 56, 0.2);
     border-radius: 10px;
+}
+.rec_Product{
+    position:absolute;
+    right: 5%;
+    top: 20%;
+    width: 150px;
+}
+.rec_productInfo{
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.rec_productInfo .rec_productExtraInfo{
+    padding-top: 5px;
+}
+
+.rec_productInfo .rec_productPrice{
+    position: relative;
+
+}
+
+.rec_productExtraInfo .rec_productPrice{
+    font-size: 1.2rem;
+}
+
+.rec_productInfo .rec_productRate{
+    box-sizing: border-box;
+    height: 30px;
+    line-height: 30px;
+    float: right;
+    padding-right: 30px;
+    color: #878282;
+}
+
+.rec_productInfo .rec_productRate .rec_productRateText{
+    vertical-align: middle;
+}
+
+ClearFix
+.rec_productRate::after{
+    content: "";
+    clear: both;
+    display: table;
 }

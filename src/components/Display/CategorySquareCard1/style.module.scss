@@ -1,19 +1,19 @@
 .productContainer{
     position: relative;
     display: flex;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
     width: 300px;
     height: 300px;
-    background: #BFEBAC;
-    opacity: 0.4;
+    background:rgba(191, 235, 172, 0.4);
 }
 
-div > img{
+.product{
     position: absolute;
     top: 25%;
     left: 5%;
     transform: rotate(-30deg);
     width: 250px;
+    // box-shadow: 1px 10px 10px #888888;
 }
 
 .productInfo{
@@ -30,7 +30,7 @@ div > img{
 .bagIcon{
     width: 45px;
     height: 45px;
-    background: #878282;
+    background:rgba(15, 12, 9, 0.7);
     position: absolute;
     bottom: 10%;
     right: -8%;
