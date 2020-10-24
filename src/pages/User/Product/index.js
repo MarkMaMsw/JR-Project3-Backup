@@ -12,7 +12,7 @@ function Product() {
 
 
 
-                <CategorySquareCard1 
+                {/* <CategorySquareCard1 
                     name = "Ultraboost 20 Shoes"
                     imgPath={require("../../../images/shoes/ultraboost-20-shoes.png")}
                     price = "340"
@@ -32,8 +32,8 @@ function Product() {
                     price = "330"
                     rate = "3.8"
                     numofColor = "2"
-                />
-{/* 
+                /> */}
+
 
                 <ProductRectangleCard1 
                     name = "Red Bag Awesome"
@@ -52,7 +52,7 @@ function Product() {
                     imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
                     price = "20.0"
                     rate = "4.5"
-                /> */}
+                />
                 
                 {/* <ProductRectangleCard2 
                 name = "Red Bag Awesome"

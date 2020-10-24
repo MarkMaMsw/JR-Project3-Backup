@@ -25,15 +25,24 @@
 
 .productInfo{
     position: relative;
+    width: 270px;
     padding-top: 10px;
     padding-left: 5px;
 }
 
-.productInfo .productPrice{
-    position: absolute;
-    top: 10px;
-    right: 5px;
+.productPrice{
+    display: flex;
+    flex-wrap: wrap;
+    float:right;
+    padding-top: 10px;
+    
 }
+.productPrice::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
 
 .bagIcon{
     width: 45px;
