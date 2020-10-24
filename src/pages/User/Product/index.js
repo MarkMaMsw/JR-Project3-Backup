@@ -36,7 +36,7 @@ function Product() {
                 /> */}
 
 
-                <ProductRectangleCard1 
+                {/* <ProductRectangleCard1 
                     name = "Red Bag Awesome"
                     imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
                     price = "20.0"
@@ -53,7 +53,7 @@ function Product() {
                     imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
                     price = "20.0"
                     rate = "4.5"
-                />
+                /> */}
                 
                 {/* <ProductRectangleCard2 
                 name = "Red Bag Awesome"
@@ -82,11 +82,11 @@ function Product() {
                 
                 />  */}
 
-                {/* <MainRectangleCard1 
+                <MainRectangleCard1 
                 name = "NIKE BLAZER MID"
                 imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
                 price = "260"
-                /> */}
+                />
 
 
             </div>
