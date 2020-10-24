@@ -22,34 +22,30 @@ class CategorySquareCard1 extends React.Component{
     render(){
         const {name, price, rate, numofColor} = this.props;
         return <>
-        {/* <Grid container spacing = {2}> */}
         <Grid item xs={12} sm={6} md = {4}>
-        <div className = {Style.container}>
+            <div className = {Style.container}>
            
                 <div className = {Style.productContainer}>
-                    <div>
-                        <img ref={this.imgPath} src={this.props.imgPath} alt="shoes" className={Style.product}  />
-                    </div>
+                    <img ref={this.imgPath} src={this.props.imgPath} alt="shoes" className={Style.product}  />
                     <div className = {Style.bagIcon}>
                         <LocalMallIcon  style={{ color: "white" , margin:"10px"}} />
                     </div>
                 </div>
-                <div>
+                <div className = {Style.productInfo}>
                     <div >
                         <h4 className = {Style.productPrice}>$ {price}</h4>
-                        <h4 className = {Style.productInfo}>{name}</h4>
+                        <h4 className = {Style.productName}>{name}</h4>
                         
                         
                     </div>
                     <div className = {Style.productExtraInfo}>
-                        <Rating name="disabled" value={rate} disabled />
                         <h4 className={Style.productColor}>{numofColor} COLORS</h4>
+                        <Rating name="disabled" value={rate} disabled />
                     </div>
                 </div>
                 
-        </div>
+            </div>
         </Grid>
-        {/* </Grid> */}
         </>
     }
 }
