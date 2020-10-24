@@ -26,6 +26,7 @@
 .productInfo{
     position: relative;
     padding-top: 10px;
+    padding-left: 5px;
 }
 
 .productInfo .productPrice{
@@ -42,22 +43,23 @@
     bottom: 10%;
     right: -8%;
 }
+
 .productExtraInfo{
     position: relative;
     padding-bottom: 10px;
 }
 
 .productColor{
-    text-align: right;
+    display: flex;
+    float: right;
+    padding-top: 5px;
     color: #878282;
     font-size: 0.8rem;
 }
 
-
-//ClearFix
-// .productPrice::after{
-//     content: "";
-//     clear: both;
-//     display: table;
-// }
+.productColor::after{
+    content: "";
+    clear: both;
+    display: table;
+}
 

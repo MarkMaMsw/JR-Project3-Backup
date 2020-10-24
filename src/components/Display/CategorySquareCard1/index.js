@@ -3,7 +3,8 @@ import Style from "./style.module.scss"
 import { withRouter } from 'react-router-dom';
 import ReactDOM from "react-dom";
 import LocalMallIcon from '@material-ui/icons/LocalMall';
-
+import Box from '@material-ui/core/Box';
+import Rating from '@material-ui/lab/Rating';
 
 class CategorySquareCard1 extends React.Component{
     constructor(){
@@ -12,12 +13,13 @@ class CategorySquareCard1 extends React.Component{
         this.state = {
             name: "Product Name",
             price: 0,
+            rate: 0,
             numofColor: 0,  
         }
     }
 
     render(){
-        const {name, price, numofColor} = this.props;
+        const {name, price, rate, numofColor} = this.props;
         return <>
         <div className = {Style.container}>
             <div className = "row">
@@ -37,6 +39,7 @@ class CategorySquareCard1 extends React.Component{
                             
                         </div>
                         <div className = {Style.productExtraInfo}>
+                            <Rating name="disabled" value={rate} disabled />
                             <h4 className={Style.productColor}>{numofColor} COLORS</h4>
                         </div>
                     </div>
