@@ -37,12 +37,19 @@ body {
     &__show-list {
         border: 1px solid red;
         width: 35%;
+        height: 500px
+    }
+    &__panels {
+        display: flex;
+        justify-content: space-around;
+        width: 55%;
     }
     &__checkout-panel {
         background-color: $background-color;
-        width: 20%;
+        width: 32%;
         padding: 3em 3.5em;
         border-radius: 10px;
+        box-shadow: 0px 9px 9px #2E3749;
     }
     &__title {
         color: $title-text-color;
@@ -89,8 +96,87 @@ body {
     }
 }
 
+@media screen and (max-width: 1170px) {
+    .payment {
+        
+        display: block;
+    }
+
+    .payment__show-list {
+        width: 90%;
+        margin: 3em auto;
+    }
+
+    .payment__panels {
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+    }
 
 
+    .payment__title {
+        font-size: 1.7em;
+    }
 
+    .payment__detail {
+        label {
+            font-size: 1.1em;
+        }
+        input {
+            font-size: 1.2em;
+        }
+    }
 
+    .payment__region {
+        label {
+            font-size: 1.1em;
+        }
+        select {
+            font-size: 0.95em;
+        }
+    }
+}
 
+@media screen and (max-width: 750px) {
+    .payment__panels {
+        display: block;
+        width: 80%;
+    }
+
+    .payment__show-list {
+        width: 80%;
+        margin: 3em auto;
+    }
+
+    .payment__checkout-panel {
+        padding: 1em 1.5em;
+        margin: 3em auto;
+        width: 85%;
+    }
+
+    .payment__title {
+        font-size: 1.4em;
+    }
+
+    .payment__detail {
+        label {
+            font-size: 0.9em;
+        }
+        input {
+            font-size: 1.0em;
+        }
+    }
+
+    .payment__region {
+        label {
+            font-size: 0.9em;
+        }
+        select {
+            font-size: 0.8em;
+        }
+    }
+
+    .payment__checkout-button {
+        font-size: 0.8em;
+    }
+}
