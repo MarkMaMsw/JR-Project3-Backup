@@ -10,6 +10,10 @@ import Grid from '@material-ui/core/Grid';
 class CategorySquareCard1 extends React.Component{
     constructor(){
         super();
+        this.productContainer = React.createRef();
+        this.productName = React.createRef();
+        this.productPrice = React.createRef();
+        this.productColor = React.createRef();
         this.imgPath = React.createRef();
         this.state = {
             name: "Product Name",
@@ -18,6 +22,21 @@ class CategorySquareCard1 extends React.Component{
             numofColor: 0,  
         }
     }
+
+    // componentDidMount(){
+    //     const { newContainerStyle, newNameStyle, newPriceStyle, newnumColorStyle} = this.props;
+    //     const pro_container = ReactDOM.findDOMNode(this.productContainer.current);
+    //     const pro_name = ReactDOM.findDOMNode(this.productName.current);
+    //     const pro_price = ReactDOM.findDOMNode(this.productName.current);
+    //     const pro_color = ReactDOM.findDOMNode(this.productName.current);
+
+    //     if (newContainerStyle) pro_container.style.cssText = newContainerStyle;
+    //     if (newNameStyle) pro_name.style.cssText = newNameStyle;
+    //     if (newPriceStyle) pro_price.style.cssText = newPriceStyle;
+    //     if (newnumColorStyle) pro_color.style.cssText = newnumColorStyle;
+
+    // }
+
 
     render(){
         const {name, price, rate, numofColor} = this.props;

@@ -4,7 +4,7 @@
     flex-wrap: wrap;
 }
 
-.rec_productContainer{
+.container .rec_productContainer{
     margin: 10px;
     position: relative;
     display: flex;
@@ -14,53 +14,46 @@
     background: rgba(255, 148, 56, 0.2);
     border-radius: 10px;
 }
-.rec_Product{
+.container .rec_productContainer .rec_Product{
     position:absolute;
     right: 5%;
-    top: 20%;
+    top: 30%;
     width: 150px;
     max-width: 43%;
 }
 .rec_productInfo{
-    padding-top: 20px;
+    padding-top: 25px;
     padding-left: 20px;
 }
 
 .rec_productInfo .rec_productName{
-    max-width: 70%;
-    width: 180px;
+    max-width: 78%;
+    width: 200px;
 }
 
 .rec_productInfo .rec_productExtraInfo{
     padding-top: 5px;
+    max-width: 55%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.rec_productInfo .rec_productPrice{
+.rec_productInfo .rec_productExtraInfo .rec_productPrice{
     position: relative;
-
-}
-
-.rec_productExtraInfo .rec_productPrice{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .rec_productInfo .rec_productRate{
-    box-sizing: border-box;
     height: 30px;
     line-height: 30px;
-    float: right;
-    padding-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
     color: #878282;
 }
 
 .rec_productInfo .rec_productRate .rec_productRateText{
     vertical-align: middle;
     display: flex;
-}
-
-ClearFix
-.rec_productRate::after{
-    content: "";
-    clear: both;
-    display: table;
+    font-size: 0.85rem;
 }
