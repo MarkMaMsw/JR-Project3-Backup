@@ -3,6 +3,7 @@ import Style from "./style.module.scss"
 import { withRouter } from 'react-router-dom';
 import ReactDOM from "react-dom";
 import AddIcon from '@material-ui/icons/Add';
+import Grid from '@material-ui/core/Grid';
 
 class ProductRectangleCard1 extends React.Component{
     constructor(){
@@ -19,9 +20,8 @@ class ProductRectangleCard1 extends React.Component{
     render(){
         const {name, price, numofColor} = this.props;
         return<>
-        <div className = "container">
-            <div className = "row">
-                <div className = "col-md-3 col-xs-6 col-sm-4">
+             <Grid item xs={12} sm={6} md = {6} lg = {4}>
+                <div className = {Style.container}>
                     <div className = {Style.rec_productContainer} >
                         <div className = {Style.imgContainer}>
                         <img ref={this.imgPath} src={this.props.imgPath} alt="shoes" className = {Style.rec_Product}/>
@@ -37,8 +37,7 @@ class ProductRectangleCard1 extends React.Component{
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+        </Grid>
         </>
     }
 }

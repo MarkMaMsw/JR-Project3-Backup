@@ -24,7 +24,7 @@ class ProductRectangleCard1 extends React.Component{
                     <div className = {Style.rec_productContainer} >
                         <img ref={this.imgPath} src={this.props.imgPath} alt="shoes" className = {Style.rec_Product}/>
                         <div className = {Style.rec_productInfo}>
-                            <h4>{name}</h4>
+                            <h4 className = {Style.rec_productName}>{name}</h4>
                                 <div className = {Style.rec_productExtraInfo}>
                                     <div className = {Style.rec_productRate}>                                       
                                         <h4 className = {Style.rec_productRateText}><StarIcon color = "secondary"/>{rate}</h4>
