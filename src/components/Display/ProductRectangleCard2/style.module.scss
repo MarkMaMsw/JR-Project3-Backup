@@ -1,3 +1,9 @@
+.container{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .rec_productContainer{
     margin: 20px;
     position: relative;
@@ -28,6 +34,7 @@
 .rec_productContainer .rec_productInfo{
     padding-top: 15px;
     padding-left: 20px;
+    max-width: 60%;
 }
 
 .rec_productContainer .rec_productColor{

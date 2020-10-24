@@ -35,7 +35,7 @@ function Product() {
                 /> */}
 
 
-                <ProductRectangleCard1 
+                {/* <ProductRectangleCard1 
                     name = "Red Bag Awesome"
                     imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
                     price = "20.0"
@@ -52,12 +52,22 @@ function Product() {
                     imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
                     price = "20.0"
                     rate = "4.5"
-                />
+                /> */}
                 
-                {/* <ProductRectangleCard2 
+                <ProductRectangleCard2 
                 name = "Red Bag Awesome"
                 imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
                 price = "185"
+                rate = "3.4"
+                numofColor = "4"
+                
+                /> 
+
+                <ProductRectangleCard2 
+                name = "Red Bag Awesome"
+                imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
+                price = "185"
+                rate = "4.6"
                 numofColor = "8"
                 
                 /> 
@@ -66,17 +76,10 @@ function Product() {
                 name = "Red Bag Awesome"
                 imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
                 price = "185"
-                numofColor = "8"
+                rate = "3.8"
+                numofColor = "7"
                 
                 /> 
-
-                <ProductRectangleCard2 
-                name = "Red Bag Awesome"
-                imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")}
-                price = "185"
-                numofColor = "8"
-                
-                />  */}
 
                 {/* <MainRectangleCard1 
                 name = "NIKE BLAZER MID"

@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import ReactDOM from "react-dom";
 import AddIcon from '@material-ui/icons/Add';
 import Grid from '@material-ui/core/Grid';
+import Rating from '@material-ui/lab/Rating';
 
 class ProductRectangleCard1 extends React.Component{
     constructor(){
@@ -18,9 +19,9 @@ class ProductRectangleCard1 extends React.Component{
     }
 
     render(){
-        const {name, price, numofColor} = this.props;
+        const {name, price, rate, numofColor} = this.props;
         return<>
-             <Grid item xs={12} sm={6} md = {6} lg = {4}>
+             <Grid item xs={12} sm={12} md = {6} lg = {4}>
                 <div className = {Style.container}>
                     <div className = {Style.rec_productContainer} >
                         <div className = {Style.imgContainer}>
@@ -28,7 +29,7 @@ class ProductRectangleCard1 extends React.Component{
                         </div>
                         <div className = {Style.rec_productInfo}>
                             <h4>{name}</h4>
-                            <div>rate</div>
+                            <Rating name="disabled" value={rate} disabled />
                             <h4>$ {price}</h4>
                             <h4 className={Style.rec_productColor}>{numofColor} COLORS</h4>
                             <div className = {Style.plusIcon}>
