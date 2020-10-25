@@ -40,6 +40,10 @@ body {
     width: 50%;
 }
 
+.payment__cart--container {
+    margin-bottom: 12em;
+}
+
 .payment__subtotal--container {
     display: flex;
     justify-content: flex-end;
@@ -53,6 +57,7 @@ body {
     bottom: 0px;
     border: 1.5px solid $label-text-color;
     border-radius: 5px;
+    box-shadow: 0px 3px 3px #2E3749;
     h2 {
         font-size: 1.5em;
         text-transform: uppercase;
@@ -74,14 +79,6 @@ body {
 .payment__cart--body {
     display: flex;
     flex-wrap: wrap;
-}
-
-.payment__cart--body > div {
-    border: 1px solid red;
-}
-
-.payment__cart--body > div > div {
-    border: 1px solid green;
 }
 
 .payment__panels {
@@ -154,7 +151,6 @@ body {
 
 @media screen and (max-width: 1270px) {
     .payment {
-        
         display: block;
     }
 
@@ -189,6 +185,10 @@ body {
         select {
             font-size: 0.95em;
         }
+    }
+
+    .payment__cart--container {
+        margin-bottom: 2em;
     }
 }
 
@@ -235,20 +235,6 @@ body {
         font-size: 0.8em;
     }
 
-    .payment__cart--body {
-        display: block;
-    }
-
-    .payment__cart--body > div {
-        border: 1px solid red;
-        margin: 0 auto;
-    }
-
-    .payment__cart--body > div > div {
-        display: block;
-        border: 1px solid green;
-    }
-
     .payment__cart--title {
         font-size: 1.2em;
     }
@@ -262,4 +248,14 @@ body {
             font-size: 1.5em;
         }
     }
+
+    .payment__cart--body > div > div{
+        border: 1px solid red;
+    }
+
+    .payment__cart--body > div {
+        border: 1px solid green;
+    }
+
+
 }
