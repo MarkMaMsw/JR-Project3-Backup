@@ -1,0 +1,78 @@
+.container{
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container .productContainer{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    background:rgba(191, 235, 172, 0.4);
+}
+
+.productContainer .product{
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    transform: rotate(-30deg);
+    width: 250px;
+    max-width: 80%;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.container .productInfo{
+    max-width: 90%;
+}
+
+.productName{
+    position: relative;
+    width: 270px;
+    max-width: 80%;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.productPrice{
+    display: flex;
+    flex-wrap: wrap;
+    float:right;
+    padding-top: 10px;
+}
+.productPrice::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.bagIcon{
+    width: 45px;
+    height: 45px;
+    background:rgba(15, 12, 9, 0.7);
+    position: absolute;
+    bottom: 10%;
+    right: -8%;
+}
+
+.productExtraInfo{
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.productExtraInfo .productColor{
+    display: flex;
+    float: right;
+    padding-top: 5px;
+    color: #878282;
+    font-size: 0.8rem;
+}
+
+.productColor::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
