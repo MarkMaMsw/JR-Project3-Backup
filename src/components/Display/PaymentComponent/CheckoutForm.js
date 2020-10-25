@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import Style from './style.module.scss'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import CheckoutButton from '../../Basic/Button/CheckoutButton/CheckoutButton'
 
@@ -27,19 +28,14 @@ const CheckoutForm = ({ price, onSuccessfulCheckout }) => {
 
     const handleFormSubmit = async ev => {
         ev.preventDefault()
-
         const { data: { client_secret } } = await axios.post("http://localhost:3001/api/payment_intents", {
-            amount: 1000
+            amount: price
         })
-
         const cardElement = elements.getElement(CardElement)
         const paymentMethodReq = await stripe.createPaymentMethod({
             type: 'card',
             card: cardElement
         })
-        console.log(paymentMethodReq)
-        console.log(client_secret)
-
         const confirmCardPayment = await stripe.confirmCardPayment(client_secret, {
             payment_method: paymentMethodReq.paymentMethod.id
         })
@@ -47,13 +43,13 @@ const CheckoutForm = ({ price, onSuccessfulCheckout }) => {
         console.log(confirmCardPayment)
     }
 
-    return <form >
-        <div className="payment__detail payment__detail-card">
-            <label>Card Info</label>
+    return <form onSubmit={handleFormSubmit}>
+        <div className={`${Style["payment__detail"]} ${Style["payment__detail-card"]}`}>
+            
             <CardElement options={cardElementOption} />
         </div>
-        <div className="payment__checkout-button">
-            <CheckoutButton onClick={handleFormSubmit}/>
+        <div className={Style["payment__checkout-button"]}>
+            <CheckoutButton buttonStyle="background-color: #4F73E6"/>
         </div>
     </form>
 }

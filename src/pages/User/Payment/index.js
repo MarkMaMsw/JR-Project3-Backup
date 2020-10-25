@@ -11,7 +11,10 @@ function Payment() {
     return (
         <>
         <Elements stripe={stripePromise}>
-            <PaymentComponent/>    
+            <PaymentComponent 
+            formStyle="background-color: #2E3749"
+            inputStyle="background-color: #2E3749"
+            labelStyle="color: #A5A8B1"/>    
         </Elements>
         </>
     );
