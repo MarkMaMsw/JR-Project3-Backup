@@ -23,19 +23,19 @@ class CategorySquareCard1 extends React.Component{
         }
     }
 
-    // componentDidMount(){
-    //     const { newContainerStyle, newNameStyle, newPriceStyle, newnumColorStyle} = this.props;
-    //     const pro_container = ReactDOM.findDOMNode(this.productContainer.current);
-    //     const pro_name = ReactDOM.findDOMNode(this.productName.current);
-    //     const pro_price = ReactDOM.findDOMNode(this.productName.current);
-    //     const pro_color = ReactDOM.findDOMNode(this.productName.current);
+    componentDidMount(){
+        const { newContainerStyle, newNameStyle, newPriceStyle, newnumColorStyle} = this.props;
+        const pro_container = ReactDOM.findDOMNode(this.productContainer.current);
+        const pro_name = ReactDOM.findDOMNode(this.productName.current);
+        const pro_price = ReactDOM.findDOMNode(this.productName.current);
+        const pro_color = ReactDOM.findDOMNode(this.productName.current);
 
-    //     if (newContainerStyle) pro_container.style.cssText = newContainerStyle;
-    //     if (newNameStyle) pro_name.style.cssText = newNameStyle;
-    //     if (newPriceStyle) pro_price.style.cssText = newPriceStyle;
-    //     if (newnumColorStyle) pro_color.style.cssText = newnumColorStyle;
+        if (newContainerStyle) pro_container.style.cssText = newContainerStyle;
+        if (newNameStyle) pro_name.style.cssText = newNameStyle;
+        if (newPriceStyle) pro_price.style.cssText = newPriceStyle;
+        if (newnumColorStyle) pro_color.style.cssText = newnumColorStyle;
 
-    // }
+    }
 
 
     render(){
@@ -44,7 +44,7 @@ class CategorySquareCard1 extends React.Component{
         <Grid item xs={12} sm={6} md = {4}>
             <div className = {Style.container}>
            
-                <div className = {Style.productContainer}>
+                <div ref={this.productContainer} className = {Style.productContainer}>
                     <img ref={this.imgPath} src={this.props.imgPath} alt="shoes" className={Style.product}  />
                     <div className = {Style.bagIcon}>
                         <LocalMallIcon  style={{ color: "white" , margin:"10px"}} />
@@ -52,13 +52,13 @@ class CategorySquareCard1 extends React.Component{
                 </div>
                 <div className = {Style.productInfo}>
                     <div >
-                        <h4 className = {Style.productPrice}>$ {price}</h4>
-                        <h4 className = {Style.productName}>{name}</h4>
+                        <h4 ref={this.productPrice} className = {Style.productPrice}>$ {price}</h4>
+                        <h4 ref={this.productName} className = {Style.productName}>{name}</h4>
                         
                         
                     </div>
                     <div className = {Style.productExtraInfo}>
-                        <h4 className={Style.productColor}>{numofColor} COLORS</h4>
+                        <h4 ref={this.productColor} className={Style.productColor}>{numofColor} COLORS</h4>
                         <Rating name="disabled" value={rate} disabled />
                     </div>
                 </div>
