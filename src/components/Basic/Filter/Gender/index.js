@@ -28,14 +28,14 @@ function GenderSelect() {
   const { men, women } = state;
 
   return(
-    <div className="container">
-      <h3>Gender</h3>
+    <div className={Style.container}>
+      <h3 className={Style.title}>Gender</h3>
       <FormControl component="fieldset">
         <FormLabel component="legend"></FormLabel>
           <FormGroup>
             <FormControlLabel 
               control={
-                <Checkbox 
+                <Checkbox
                   checked={men}
                   onChange={handleChange}
                   name="men"

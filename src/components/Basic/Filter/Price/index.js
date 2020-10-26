@@ -5,11 +5,12 @@ import ReactDOM from "react-dom";
 import { makeStyles } from '@material-ui/core/styles';
 
 
-const useStyles = makeStyles({
-  root: {
-    width: 150,
-  }
-})
+// const useStyles = makeStyles({
+//   root: {
+//     width: 150,
+//     color: "red",
+//   },
+// })
 
 
 function valuetext(value) {
@@ -17,7 +18,7 @@ function valuetext(value) {
 }
 
 function PriceSlider() {
-  const classes = useStyles();
+  // const classes = useStyles();
   const [value, setValue] = React.useState([0, 500]);
 
   const updateRange = (e, newValue) => {
@@ -25,14 +26,15 @@ function PriceSlider() {
   }
 
   return (
-    <div className={classes.root}>
-      <h3>Price</h3>
+      <div className={Style.container}>
+      <h3 className={Style.title}>Price</h3>
       <Slider 
+        className={Style.slider}
         value={value}
         onChange={updateRange}
-        valueLabelDisplay='auto'
+        valueLabelDisplay='on'
         aria-labelledby="range-slider"
-        getAriaLabel={valuetext}
+        getAriaValueText={valuetext}
         max={1000}
       />
     </div>
