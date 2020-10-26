@@ -4,102 +4,140 @@ import Style from './style.module.scss';
 import PriceSlider from './../../Basic/Filter/Price';
 import GenderSelect from './../../Basic/Filter/Gender';
 import ColorSelect from './../../Basic/Filter/Color';
-import { ProductCardMode1 } from "./../ProductCardMode1";
 import Grid from '@material-ui/core/Grid';
-import FakeCard from '../../Basic/Filter/FakeCard';
+import CategorySquareCard1 from './../CategorySquareCard1';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import CancelIcon from '@material-ui/icons/Cancel';
+import Hidden from '@material-ui/core/Hidden';
+import Drawer from '@material-ui/core/Drawer';
+
 
 class CategoryDisplay extends React.Component {
   constructor() {
     super();
-
+    this.state = {
+      mobileOpen: false
+    }
   }
+
+
+  handleDrawerToggle = () => {
+    this.setState({mobileOpen: true})
+  };
+
+  handleDrawerClose = (e) => {
+    this.setState({mobileOpen: false})
+  }
+
+
+  setContainer = () => {
+    const container = window !== undefined ? () => window().document.body : undefined;
+    return container;
+  }
+
   render() { 
+    
     return ( 
-      <div className={Style.root}>
+      <div>
         <Grid className={Style.container} container spacing={2}>
-          <Grid item sm={3}>
-          <h3 className={Style.side__title}>Lifestyle (3)</h3>
-            <div>
+          {/* filter drawer for screen below xs */}
+          <Hidden smUp implementation="css">
+            <Drawer
+              // container={this.setContainer()}
+              variant="temporary"
+              anchor='left'
+              open={this.state.mobileOpen}
+              ModalProps={{
+                keepMounted: true, // Better open performance on mobile.
+              }}
+            >
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={this.handleDrawerClose}
+                className={Style.menuButton}
+                >
+                <CancelIcon />
+              </IconButton>
               <PriceSlider />
               <GenderSelect />
               <ColorSelect />
-            </div>
-          </Grid>
-          <Grid item sm={9}>
+            </Drawer>
+          </Hidden>
+
+          
+          <Grid className={Style.side} item sm={3}>
+          <Hidden xsDown implementation="css">
+            {/* <Drawer
+              variant="permanent"
+              open
+            >
+           */}
+          <h3 className={Style.side__title}>Lifestyle (3)</h3>
+              <PriceSlider />
+              <GenderSelect />
+              <ColorSelect />
+             
+            {/* </Drawer> */}
+            </Hidden>
+            </Grid>
+          
+
+         
+          <Grid className={Style.main} item xs={12} sm={9}>
             <h2 className={Style.main__title}>3 Lifestyle Sneakers</h2>
+            <Hidden mdUp>
+              <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={this.handleDrawerToggle}
+              className={Style.menuButton}
+              >
+              <MenuIcon />
+            </IconButton>
+          </Hidden>
+
+
+
             <Grid container>
-              <Grid className={Style.main__product} xs={12} sm={6} md={4}>
-                <FakeCard
-                  name="Ultraboost 20 Shoes"
-                  imgURL={require("./../../../images/shoes/ultraboost-20-shoes.png")}
-                  imgAlt="Ultraboost 20 Shoes"
-                  price="$220"
-                />
-              </Grid>
-              <Grid className={Style.main__product} xs={12} sm={6} md={4}>
-                <FakeCard 
-                  name="ZX 2K 4D Shoes"
-                  imgURL={require("./../../../images/shoes/zx-2k-4d-shoes.png")}
-                  imgAlt="ZX 2K 4D Shoes"
-                  price="$320"
-                />
-              </Grid>
-              <Grid className={Style.main__product} xs={12} sm={6} md={4}>
-                <FakeCard 
-                  name="4D RUN 1.0 Parley Shoes"
-                  imgURL={require("./../../../images/shoes/4d-run-1.0-parley-shoes.png")}
-                  imgAlt="4D RUN 1.0 Parley Shoes"
-                  price="$220"
-                />
-              </Grid>
-              <Grid className={Style.main__product} xs={12} sm={6} md={4}>
-                <FakeCard
-                  name="Ultraboost 20 Shoes"
-                  imgURL={require("./../../../images/shoes/ultraboost-20-shoes.png")}
-                  imgAlt="Ultraboost 20 Shoes"
-                  price="$220"
-                />
-              </Grid>
-              <Grid className={Style.main__product} xs={12} sm={6} md={4}>
-                <FakeCard 
-                  name="ZX 2K 4D Shoes"
-                  imgURL={require("./../../../images/shoes/zx-2k-4d-shoes.png")}
-                  imgAlt="ZX 2K 4D Shoes"
-                  price="$320"
-                />
-              </Grid>
-              <Grid className={Style.main__product} xs={12} sm={6} md={4}>
-                <FakeCard 
-                  name="4D RUN 1.0 Parley Shoes"
-                  imgURL={require("./../../../images/shoes/4d-run-1.0-parley-shoes.png")}
-                  imgAlt="4D RUN 1.0 Parley Shoes"
-                  price="$220"
-                />
-              </Grid>
-              <Grid className={Style.main__product} xs={12} sm={6} md={4}>
-                <FakeCard
-                  name="Ultraboost 20 Shoes"
-                  imgURL={require("./../../../images/shoes/ultraboost-20-shoes.png")}
-                  imgAlt="Ultraboost 20 Shoes"
-                  price="$220"
-                />
-              </Grid>
-              <Grid className={Style.main__product} xs={12} sm={6} md={4}>
-                <FakeCard 
-                  name="ZX 2K 4D Shoes"
-                  imgURL={require("./../../../images/shoes/zx-2k-4d-shoes.png")}
-                  imgAlt="ZX 2K 4D Shoes"
-                  price="$320"
-                />
-              </Grid>
-              <Grid className={Style.main__product} xs={12} sm={6} md={4}>
-                <FakeCard 
-                  name="4D RUN 1.0 Parley Shoes"
-                  imgURL={require("./../../../images/shoes/4d-run-1.0-parley-shoes.png")}
-                  imgAlt="4D RUN 1.0 Parley Shoes"
-                  price="$220"
-                />
-              </Grid>
+              <CategorySquareCard1 
+                name = "Ultraboost 20 Shoes"
+                imgPath={require("../../../images/shoes/ultraboost-20-shoes.png")}
+                price = "340"
+                rate = "3.4"
+                numofColor = "8"
+              />
+              <CategorySquareCard1 
+                name = "Ultraboost 20 Shoes"
+                imgPath={require("../../../images/shoes/ultraboost-20-shoes.png")}
+                price = "340"
+                rate = "3.4"
+                numofColor = "8"
+              />
+              <CategorySquareCard1 
+                name = "Ultraboost 20 Shoes"
+                imgPath={require("../../../images/shoes/ultraboost-20-shoes.png")}
+                price = "340"
+                rate = "3.4"
+                numofColor = "8"
+              />
+              <CategorySquareCard1 
+                name = "Ultraboost 20 Shoes"
+                imgPath={require("../../../images/shoes/ultraboost-20-shoes.png")}
+                price = "340"
+                rate = "3.4"
+                numofColor = "8"
+              />
+              <CategorySquareCard1 
+                name = "Ultraboost 20 Shoes"
+                imgPath={require("../../../images/shoes/ultraboost-20-shoes.png")}
+                price = "340"
+                rate = "3.4"
+                numofColor = "8"
+              />
             </Grid>
           </Grid>
         </Grid>
