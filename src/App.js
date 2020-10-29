@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Home from "./pages/User/Home";
+import Homepage from "./pages/User/Home";
 import Category from "./pages/User/Category";
 import Login from "./pages/User/Login";
 import Order from "./pages/User/Order";
@@ -44,7 +44,7 @@ function App() {
         <Route path="/example" component={Example} /> {/* 订单更新页*/}
 
         {/* Home should be putted last or the Route always porint to Home*/}
-        <Route path="/" component={Home} /> {/* Home*/}
+        <Route path="/" component={Homepage} /> {/* Home*/}
       </Switch>
     </Router>
   );
