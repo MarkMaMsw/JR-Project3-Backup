@@ -1,12 +1,13 @@
 import React from 'react';
-// import Style from "./style.module.scss"
+//import Style from "./style.module.scss"
+import SignUp from "../../../components/Display/SignUp"
 
-function SignUp() {
+function _SignUp() {
     return (
         <>
-            SignUp
+            <SignUp />
         </>
     );
 }
 
-export default SignUp;
+export default _SignUp;

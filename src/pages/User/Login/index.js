@@ -1,12 +1,13 @@
 import React from 'react';
-// import Style from "./style.module.scss"
+//import Style from "./style.module.scss"
+import Login from "../../../components/Display/Login"
+function _Login() {
 
-function Login() {
     return (
         <>
-            Login
+            <Login />
         </>
     );
 }
 
-export default Login;
+export default _Login;
