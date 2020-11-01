@@ -5,14 +5,14 @@
 }
 
 .rec_productContainer{
-    border: 1px solid black;
+    // border: 1px solid black;
     margin: 10px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     width: 750px;
     height: 450px;
-    background:rgba(255, 255, 255, 0.1);
+    background:rgba(255, 255, 255,0.05);
 }
 
 .rec_productContainer .imgContainer .rec_Product{

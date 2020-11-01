@@ -8,211 +8,189 @@ import { useTheme } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
-
-
-const product_list = ['./1.png', './2.png', './3.png', './4.png', './5.png'];
-// const product_list = ['./1.png'];
-
-function Home() {
-  return (
-    <React.Fragment>
-      <NavBar/>
-      {/* <Login/> */}
-    </React.Fragment>
-  );
-}
-
-function DotsMobileStepper() {
-  // const classes = useStyles();
-  const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(3);
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    // this.props.parent.getChildrenMsg(this,activeStep)
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-    // this.props.parent.getChildrenMsg(this,activeStep)
-    console.log(this.props)
-  };
-
-  return (
-    <MobileStepper
-      variant="dots"
-      steps={product_list.length}
-      position="static"
-      activeStep={activeStep}
-      // className={classes.root}
-      nextButton={
-        <Button size="small" onClick={handleNext} disabled={activeStep === product_list.length}>
-          Next
-          {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-        </Button>
-      }
-      backButton={
-        <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-          {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-          Back
-        </Button>
-      }
-    />
-  );
-}
+import MainRectangleCard1 from '../../../components/Display/MainRectangleCard1/index.js';
+import ProductRectangleCard2 from '../../../components/Display/ProductRectangleCard2/index.js';
+import Grid from '@material-ui/core/Grid';
 
 
 
+// function DotsMobileStepper() {
+//   // const classes = useStyles();
+//   const theme = useTheme();
+//   const [activeStep, setActiveStep] = React.useState(3);
 
-class Slide extends React.Component {
-  constructor(props) { 
-    super(props)
-    this.state = {
-      index: this.props.index,
-      // title: this.props.title
-    }
-  }
-  
-  getIndex = (event) => { 
-    // alert(+event.currentTarget.getAttribute('index')+1)
-    this.props.parent.getChildrenMsg(this, (+event.currentTarget.getAttribute('index')+1),
-      event.currentTarget.getAttribute('src'),
-      this.refs.title.innerHTML,
-      this.refs.price.innerHTML,
-      )
-    this.setState({
-      index: (+event.currentTarget.getAttribute('index')+1),
-    })
-    // alert(this.refs.title.innerHTML)
-  }
+//   const handleNext = () => {
+//     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+//     // this.props.parent.getChildrenMsg(this,activeStep)
+//   };
 
-  // showIndex=()=>{ 
-  //   alert(typeof this.state.index)
-  // }
+//   const handleBack = () => {
+//     setActiveStep((prevActiveStep) => prevActiveStep - 1);
+//     // this.props.parent.getChildrenMsg(this,activeStep)
+//     console.log(this.props)
+//   };
 
-  render() {
-    return (
-      <div className={Style.scroller} >
-          {product_list.map((src,index) => { 
-            return (<div className={Style.productInfo} index={index} src={src} onMouseMove={this.getIndex}>
-              <div  className={Style.productInfo__img_container}><img key={index} src={require(`${src}`)} alt='hhhh' /></div>
-              <div  className={Style.productInfo__text_container}>
-                <div  className={Style.productInfo__text}>
-                  <h3 ref='title'>{index}</h3>
-                  <h3>☆☆☆☆☆</h3>
-                  <p ref='price'>$280</p>
-                  <p>description</p>
-                </div>
-                <div className={Style.productInfo__addBag}><Button color='primary'><AddIcon/></Button></div>
-              </div>
-            </div>
-          )})}
-      </div>
-    )
-   }
-}
+//   return (
+//     <MobileStepper
+//       variant="dots"
+//       steps={product_list.length}
+//       position="static"
+//       activeStep={activeStep}
+//       // className={classes.root}
+//       nextButton={
+//         <Button size="small" onClick={handleNext} disabled={activeStep === product_list.length}>
+//           Next
+//           {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+//         </Button>
+//       }
+//       backButton={
+//         <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+//           {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+//           Back
+//         </Button>
+//       }
+//     />
+//   );
+// }
 
-class ProductBigBox extends React.Component { 
-  constructor(props){
-    super(props)
-    this.state = {
-    }
-  }
+// class Slide extends React.Component {
+//   constructor(props) { 
+//     super(props)
+//     this.state = {
+//       index: this.props.index,
+//       // title: this.props.title
+//     }
+//   }
 
-  // showTitle = () => { 
-  //   alert(this.props.title)
-  // }
+//   render() {
+//     return (
+//       <div className={Style.scroller} >
+//           {product_list.map((src,index) => { 
+//             return (<div className={Style.productInfo} index={index} src={src} onMouseMove={this.getIndex}>
+//               <div  className={Style.productInfo__img_container}><img key={index} src={require(`${src}`)} alt='hhhh' /></div>
+//               <div  className={Style.productInfo__text_container}>
+//                 <div  className={Style.productInfo__text}>
+//                   <h3 ref='title'>{index}</h3>
+//                   <h3>☆☆☆☆☆</h3>
+//                   <p ref='price'>$280</p>
+//                   <p>description</p>
+//                 </div>
+//                 <div className={Style.productInfo__addBag}><Button color='primary'><AddIcon/></Button></div>
+//               </div>
+//             </div>
+//           )})}
+//       </div>
+//     )
+//    }
+// }
 
-  render() { 
-    return (
-      <div className={Style.homeContainer__productBigBox} onMouseMove={this.showTitle}>
-        {this.props.title}
-      </div>     
-    )
-  }
-}
+// class ProductBigBox extends React.Component { 
+//   constructor(props){
+//     super(props)
+//     this.state = {
+//     }
+//   }
+
+//   render() { 
+//     return (
+//       <div className={Style.homeContainer__productBigBox} onMouseMove={this.showTitle}>
+//         {this.props.title}
+//       </div>     
+//     )
+//   }
+// }
 
 
 class Homepage extends React.Component { 
   constructor(props) { 
     super(props)
     this.state = {
-      product_list : ['./1.png', './2.png', './3.png', './4.png', './5.png'],
-      index:1,
-      currentImg: './1.png',
-      productTitle: '',
-      productPrice: '',
+      index: 0,
+      path: '',
+      name: '',
+      price: '',
     }
   }
 
-  getChildrenMsg = (result, msg, src, title, price) => {
+  getChildrenMsg = (result, index, src, name, price) => {
     // console.log(result, msg)
     // 很奇怪这里的result就是子组件那bind的第一个参数this，msg是第二个参数
     this.setState({
-      index: msg,
-      currentImg: src,
-      productTitle: title,
-      productPrice: price,
+      index: index,
+      path: src,
+      name: name,
+      price: price,
     })
-    // alert(this.state.productTitle)
   }
 
-//   showImg = () => {
-//     // console.log(result, msg)
-//     // 很奇怪这里的result就是子组件那bind的第一个参数this，msg是第二个参数
-//     alert(this.state.currentImg)
-//     // alert(this.state.index)
-// }
+  
+componentWillMount() { 
+  this.setState({
+    index: 1,
+    path: require("../../../images/shoes/4d-run-1.0-parley-shoes.png"),
+    name: "Nike Blazer Mid",
+    price: 100,
+  })
+}
 
-  // componentDidMount() { 
-  //   setInterval(() => {
-  //     let { index } = this.state;
-  //     const length = this.state.product_list.length
-  //     index += 1;
-  //     if (index > length) { index = 1 };
-  //     this.setState({index})
-  //   }, 5000);
-  // }
+componentDidMount() { 
+  this.timer = setInterval(() => {
+    let { index } = this.state;
+    index += 1;
+    if (index === 6) { index = 1 };
+    this.setState({
+      index: index,
+      path: this.refs[index].props.imgPath,
+      name: this.refs[index].props.name,
+      price: this.refs[index].props.price,
+    })
+  }, 5000);
+}
 
   componentWillUnmount() { 
-    document.getElementById('root');
+    clearInterval(this.timer);
   }
 
-  // hhh=(event)=>{ 
-  //   alert(event.target.nodeName)
-  // }
-
   render() { 
-    const totalProducts = this.state.product_list.length
-    const { product_list, index, currentImg } = this.state
-    // let small_list = product_list.map((item, imgIndex) => {
-    //   if ((imgIndex + 1) === index) {
-    //     return null;
-    //   } else {
-    //     return <div className={Style.imgBox}>
-    //       <img src={require(`${item}`)} key={imgIndex} className='img'  alt='why'/>
-    //     </div>
-    //   }
-    // })
     return (
       <React.Fragment>
-        <Home/>
+        <NavBar />
         <div className={Style.homeContainer} >
-          {/* style={{ backgroundImage: `url(${require(`${currentImg}`)})` }} onClick={this.showImg} */}
-          <ProductBigBox parent={this} title={this.state.productTitle} price={this.state.productPrice} src={this.state.src}/>
-          {/* {(() => {
-            return <div>
-              
-            </div>}
-            )()} */}
-          <div className={Style.homeContainer__slide}>
-            <div><h3>0{index}/0{totalProducts}</h3></div>
-            {/* <DotsMobileStepper parent={this}/> */}
-            {/* {small_list} */}
-            <Slide index={this.state.index} parent={this}/>
+          <div className={Style.homeContainer__productContainer}>
+            <div className={Style.homeContainer__imgContainer} >
+                <img src={require('./BackImg.jpg')} alt="error"/>
+            </div>
+            <div  className={Style.homeContainer__cardContainer}>
+            {/* <MainRectangleCard1 name={'NIke Blazer MID'} imgPath={require('../../../images/shoes/zx-2k-4d-shoes.png')} price='260'/> */}
+              <MainRectangleCard1 parent={this} index={this.state.index} name={this.state.name} imgPath={this.state.path} price={this.state.price}/>
+            </div>
           </div>
+          {/* <div className={Style.list}><h3>0{index}/0{totalProducts}</h3></div> */}
+          <div className={Style.homeContainer__slide}>
+          <ProductRectangleCard2 ref={1} index={1} parent={this} name = "Nike Blazer Mid" imgPath={require("../../../images/shoes/4d-run-1.0-parley-shoes.png")} price = "100" rate = "3.4" numofColor = "4"/>
+          <ProductRectangleCard2 ref={2} index={2} parent={this} name = "Blue Bag Awesome" imgPath={require("../../../images/shoes/ultraboost-20-shoes.png")} price = "200" rate = "3.4" numofColor = "4"/>
+          <ProductRectangleCard2 ref={3} index={3} parent={this} name = "White Bag Awesome" imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")} price = "300" rate = "3.4" numofColor = "4"/>
+          <ProductRectangleCard2 ref={4} index={4} parent={this} name = "Black Bag Awesome" imgPath={require("../../../images/shoes/4d-run-1.0-parley-shoes.png")} price = "400" rate = "3.4" numofColor = "4"/>
+          <ProductRectangleCard2 ref={5} index={5} parent={this} name = "Black Bag Awesome" imgPath={require("../../../images/shoes/4d-run-1.0-parley-shoes.png")} price = "400" rate = "3.4" numofColor = "4"/>
+          </div>
+           {/* <Grid container spacing={2}>
+        <Grid item xs={12} sm={6} md={6} lg={4}>
+        <ProductRectangleCard2 ref={1} index={1} parent={this} name = "Nike Blazer Mid" imgPath={require("../../../images/shoes/4d-run-1.0-parley-shoes.png")} price = "100" rate = "3.4" numofColor = "4"/>
+        </Grid>
+        <Grid item xs={12} sm={6} md={6} lg={4}>
+        <ProductRectangleCard2 ref={2} index={2} parent={this} name = "Blue Bag Awesome" imgPath={require("../../../images/shoes/ultraboost-20-shoes.png")} price = "200" rate = "3.4" numofColor = "4"/>
+        </Grid>
+        <Grid item xs={12} sm={6} md={6} lg={4}>
+        <ProductRectangleCard2 ref={3} index={3} parent={this} name = "White Bag Awesome" imgPath={require("../../../images/shoes/zx-2k-4d-shoes.png")} price = "300" rate = "3.4" numofColor = "4"/>
+        </Grid>
+        <Grid item xs={12} sm={6} md={6} lg={6}>
+        <ProductRectangleCard2 ref={4} index={4} parent={this} name = "Black Bag Awesome" imgPath={require("../../../images/shoes/4d-run-1.0-parley-shoes.png")} price = "400" rate = "3.4" numofColor = "4"/>
+        </Grid>
+        <Grid item xs={12} sm={6} md={6} lg={6}>
+        <ProductRectangleCard2 ref={5} index={5} parent={this} name = "Black Bag Awesome" imgPath={require("../../../images/shoes/4d-run-1.0-parley-shoes.png")} price = "400" rate = "3.4" numofColor = "4"/>
+        </Grid>
+      </Grid> */}
         </div>
-
       </React.Fragment>
     )
   }

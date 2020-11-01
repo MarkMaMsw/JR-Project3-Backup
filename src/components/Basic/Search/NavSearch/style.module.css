@@ -1,19 +1,1 @@
-.searchContainer{
-    display:flex;
-    align-items: center;
-    height:3vh;
-    border-radius:15px;
-    background-color: rgb(243, 237, 237);
-    padding-right:10px;
-}
-.searchContainer_inputBox{
-    border-style:none;
-    outline:none;
-    background-color: rgb(243, 237, 237);
-}
-
-.searchContainer_icon{
-    display:inline-block;
-    height:24px;
-}
 

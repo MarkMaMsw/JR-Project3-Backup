@@ -16,13 +16,20 @@ class MainRectangleCard1 extends React.Component{
             price: 0, 
         }
     }
+    handleMove = (event) => {
+        this.props.parent.componentWillUnmount();
+    }
+    
+    handleOut = (event) => {
+        this.props.parent.componentDidMount()
+      }
 
     render(){
         const {name, price} = this.props;
         return <>
         <Grid item xs={12} sm={12} md = {10} >
             <div className = {Style.container}>
-                    <div className = {Style.rec_productContainer} >
+                    <div className={Style.rec_productContainer} onMouseMove={this.handleMove} onMouseOut={this.handleOut} >
                         <div className = {Style.imgContainer}>
                         <img ref={this.imgPath} src={this.props.imgPath} alt="shoes" className = {Style.rec_Product}/>
                         </div>
