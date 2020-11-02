@@ -22,7 +22,7 @@ const cardElementOption = {
     hidePostalCode: true
 }
 
-const CheckoutForm = ({ price, onSuccessfulCheckout }) => {
+const CardInfoField = ({ price, onSuccessfulCheckout }) => {
     const stripe = useStripe()
     const elements = useElements()
 
@@ -43,7 +43,7 @@ const CheckoutForm = ({ price, onSuccessfulCheckout }) => {
         console.log(confirmCardPayment)
     }
 
-    return <form onSubmit={handleFormSubmit}>
+    return <form onSubmit={handleFormSubmit, onSuccessfulCheckout}>
         <div className={`${Style["payment__detail"]} ${Style["payment__detail-card"]}`}>
             
             <CardElement options={cardElementOption} />
@@ -54,4 +54,4 @@ const CheckoutForm = ({ price, onSuccessfulCheckout }) => {
     </form>
 }
 
-export default CheckoutForm
+export default CardInfoField
