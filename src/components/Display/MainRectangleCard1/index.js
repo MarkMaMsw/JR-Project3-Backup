@@ -5,6 +5,7 @@ import ReactDOM from "react-dom";
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import { Box } from '@material-ui/core';
 
 
 class _MainRectangleCard1 extends React.Component{
@@ -50,20 +51,27 @@ class _MainRectangleCard1 extends React.Component{
     render(){
         const {name, price} = this.props;
         return <>
-        <Grid item xs={12} sm={12} md = {12} >
-            <div className = {Style.container}>
-                    <div ref={this.rec_productContainer}  className = {Style.rec_productContainer} >
-                        <div ref={this.imgContainer} className = {Style.imgContainer}>
-                        <img ref={this.imgPath} src={this.props.imgPath} alt="shoes" className = {Style.rec_Product} onClick={() => this.imgLink()}/>
-                        </div>
-                        <div className = {Style.rec_productInfo}>
+        
+       
+        <Grid container >
+            <Grid item xs={12} sm={12} md = {12}>
+                <Box className = {Style.container}>
+                    <Box ref={this.rec_productContainer}  className = {Style.rec_productContainer} >
+                        
+                        <Grid item md = {6} sm={6} xs={6} className = {Style.rec_productInfo}>
                             <h4 ref={this.mainrec_Name} className = {Style.mainrec_Name}>{name}</h4>
                             <h4 ref={this.mainrec_Price} className = {Style.mainrec_Price}>$ {price}</h4>
                             <Button ref={this.mainrec_Button} variant="outlined" className = {Style.mainrec_Button} onClick={() => this.buttonLink()} >GET IT NOW<ArrowRightIcon /></Button>
-                        </div>
-                    </div>
-            </div>
-        </Grid>      
+                        </Grid>
+                        <Grid item md = {6} sm={6} xs={6} ref={this.imgContainer} className = {Style.imgContainer}>
+                        <img ref={this.imgPath} src={this.props.imgPath} alt="shoes" className = {Style.rec_Product} onClick={() => this.imgLink()}/>
+                        </Grid>
+                    </Box>
+                </Box>
+            </Grid>
+        </Grid>
+     
+            
         </>
     }
 
