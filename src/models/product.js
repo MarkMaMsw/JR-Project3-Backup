@@ -1,11 +1,11 @@
 const { OutlinedInput } = require('@material-ui/core');
 const { isValidObjectId } = require('../database/db.js');
-const mongoose = require('../database/db.js');
+const {mongoose, ObjectID } = require('../database/db.js');
 
 const Schema = mongoose.Schema;
 
 var productSchema = new Schema({
-    _id: {type: ObjectId},
+    _id: {type: ObjectID},
     productId: {type: String},
     name: {type: String},
     primaryColor: {type: String},
