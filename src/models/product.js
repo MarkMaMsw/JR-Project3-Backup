@@ -11,7 +11,8 @@ const productSchema = new Schema({
     image: {type: String},
     stars: {type: Number},
     price: {type: Number},
-    description: {type: String}
+    description: {type: String},
+    deleted: {type: Boolean}
 });
 
 const Product = model('Product', productSchema);

@@ -6,4 +6,12 @@ async function create (ctx){
     ctx.body = savedProduct;
 };
 
-module.exports = {create};
+async function findAndDelete(ctx){
+    const id = ctx.params.productId;
+    const product_toDelete = await Product.findById(id);
+    product_toDelete.deleted = true;
+
+    const product_deleted = await product_toDelete.save();
+    ctx.body = product_deleted;
+};
+module.exports = {create, findAndDelete};

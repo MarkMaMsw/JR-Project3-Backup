@@ -2,8 +2,6 @@ import React from 'react';
 import Style from "./style.module.scss"
 import { ProductCardMode1 } from "../../components/Display/ProductCardMode1"
 
-const Product = require("../../models/product.js");
-const test = Product.findOne();
 function Example() {
     return (
         <>
