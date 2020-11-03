@@ -1,103 +1,106 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import Style from "./style.module.scss";
 import { withRouter } from 'react-router-dom';
 // import ReactDOM from "react-dom";
-import PropTypes from 'prop-types';
-import {
-  makeStyles,
-  AppBar,
-  Tabs,
-  Tab,
-  Typography,
-  Box,
-  IconButton,
-} from '@material-ui/core';
-import LocalMallIcon from '@material-ui/icons/LocalMall';
-import MenuIcon from '@material-ui/icons/Menu';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import Style from './style.module.scss';
 
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  };
-}
+const RenderNavLinks = props => {
+  return (
+    <ul
+      className={
+        props.open
+          ? [Style.navLinks, Style.navLinksOpen].join(' ')
+          : [Style.navLinks, Style.navLinksClosed].join(' ')
+      }
+    >
+      <li id={Style.menuOne}>
+        <a class={Style.menuLink}>Most Popular</a>
+        <div id={Style.subMenuOne} className={Style.subMenuWrapper}>
+          <ul className={Style.subMenuItem}>
+            <li>
+              <a>Lifestyle</a>
+            </li>
+            <li>
+              <a>Running</a>
+            </li>
+            <li>
+              <a>Basketball</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li id={Style.menuTwo}>
+        <a class={Style.menuLink}>Men</a>
+        <div id={Style.subMenuTwo} className={Style.subMenuWrapper}>
+          <ul className={Style.subMenuItem}>
+            <li>
+              <a>Lifestyle</a>
+            </li>
+            <li>
+              <a>Running</a>
+            </li>
+            <li>
+              <a>Basketball</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li id={Style.menuThree}>
+        <a class={Style.menuLink}>Women</a>
+        <div id={Style.subMenuThree} className={Style.subMenuWrapper}>
+          <ul className={Style.subMenuItem}>
+            <li>
+              <a>Lifestyle</a>
+            </li>
+            <li>
+              <a>Running</a>
+            </li>
+            <li>
+              <a>Basketball</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  );
+};
 
-const useStyles = makeStyles(theme => ({
-  appbar: {
-    boxShadow: 'none',
-  },
-  indicator: {
-    backgroundColor: 'black',
-    height: '5px',
-  },
-  tab: {
-    fontSize: '1.4rem',
-  },
-  icon: {
-    height: '50px',
-  },
-  grayBar: {
-    height: '8vh',
-    backgroundColor: '#f5f5f5',
-  },
-}));
+const ShowBurgerMenu = props => {
+  return (
+    <button
+      className={Style.burgerMenu}
+      onClick={() => props.setOpen(!props.open)}
+    >
+      <FontAwesomeIcon icon={faBars} />
+    </button>
+  );
+};
 
-export default function _NavBar() {
-  const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+function _NavBar() {
+  const [open, setOpen] = useState(false);
 
   return (
     <div className={Style.navbar}>
-      <AppBar className={classes.appbar} position="static">
-        <Box className={classes.grayBar} />
-        <Box className={Style.menu}>
-          <img src="favicon.ico" className={classes.icon} />
-          <div className={Style.menuItem}>
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              classes={{
-                indicator: classes.indicator,
-              }}
-            >
-              <Tab
-                className={[classes.tab, Style.item].join(' ')}
-                disableRipple
-                label="Most Popular"
-                {...a11yProps(0)}
-              />
-              <Tab
-                className={[classes.tab, Style.item].join(' ')}
-                disableRipple
-                label="Men"
-                {...a11yProps(1)}
-              />
-              <Tab
-                className={[classes.tab, Style.item].join(' ')}
-                disableRipple
-                label="Women"
-                {...a11yProps(2)}
-              />
-            </Tabs>
-          </div>
-          <div>
-            <IconButton classes={{ label: Style.burgerMenu }}>
-              <MenuIcon fontSize="large" />
-            </IconButton>
-            <IconButton aria-label="account">
-              <LocalMallIcon fontSize="large" />
-            </IconButton>
-          </div>
-        </Box>
-      </AppBar>
-      <Box>
-        <Box className={classes.grayBar} />
-      </Box>
+      <div className={Style.navbar__top}>
+        <div className={Style.navbar__top__item}>Join Us</div>
+        <span className={Style.navbar__top__divider}>|</span>
+        <div className={Style.navbar__top__item}>Sign In</div>
+      </div>
+      <div className={Style.navbar__bottom}>
+        <div className={Style.logo}>
+          <img src="favicon.ico" className={Style.logo__image} />
+        </div>
+        <RenderNavLinks open={open} />
+        <div className={Style.navIcons}>
+          <ShowBurgerMenu open={open} setOpen={setOpen} />
+          <a>
+            <FontAwesomeIcon icon={faShoppingBag} />
+          </a>
+        </div>
+      </div>
+      <div className={Style.banner}></div>
     </div>
   );
 }
