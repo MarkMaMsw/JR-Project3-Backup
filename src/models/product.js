@@ -1,10 +1,7 @@
-const { OutlinedInput } = require('@material-ui/core');
 const { isValidObjectId } = require('../database/db.js');
-const {mongoose, Schema, ObjectId}= require('../database/db.js');
+const {mongoose, Schema, ObjectId, model}= require('../database/db.js');
 
-const Schema_P = mongoose.Schema;
-
-var productSchema = new Schema_P({
+const productSchema = new Schema({
     _id: {type: ObjectId},
     productId: {type: String},
     name: {type: String},
@@ -17,4 +14,6 @@ var productSchema = new Schema_P({
     description: {type: String}
 });
 
-module.exports = mongoose.model('Product',productSchema);
+const Product = model('Product', productSchema);
+
+module.exports = model('Product');
