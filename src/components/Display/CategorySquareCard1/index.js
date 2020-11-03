@@ -7,7 +7,7 @@ import Box from '@material-ui/core/Box';
 import Rating from '@material-ui/lab/Rating';
 import Grid from '@material-ui/core/Grid';
 
-class CategorySquareCard1 extends React.Component{
+class _CategorySquareCard1 extends React.Component{
     constructor(){
         super();
         this.productContainer = React.createRef();
@@ -37,6 +37,15 @@ class CategorySquareCard1 extends React.Component{
 
     }
 
+    buttonLink = () => {
+        const { buttonLink } = this.props;
+        if (buttonLink) this.props.history.push(buttonLink);
+    }
+
+    imgLink = () => {
+        const { imgLink } = this.props;
+        if (imgLink) this.props.history.push(imgLink);
+    }
 
     render(){
         const {name, price, rate, numofColor} = this.props;
@@ -45,8 +54,8 @@ class CategorySquareCard1 extends React.Component{
             <div className = {Style.container}>
            
                 <div ref={this.productContainer} className = {Style.productContainer}>
-                    <img ref={this.imgPath} src={this.props.imgPath} alt="shoes" className={Style.product}  />
-                    <div className = {Style.bagIcon}>
+                    <img ref={this.imgPath} src={this.props.imgPath} alt="shoes" className={Style.product} onClick={() => this.imgLink()}/>
+                    <div className = {Style.bagIcon} onClick={() => this.buttonLink()}>
                         <LocalMallIcon  style={{ color: "white" , margin:"10px"}} />
                     </div>
                 </div>
@@ -70,4 +79,6 @@ class CategorySquareCard1 extends React.Component{
 }
 
 
-export default CategorySquareCard1;
+const CategorySquareCard1 = withRouter(_CategorySquareCard1);
+
+export { CategorySquareCard1 };
