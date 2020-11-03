@@ -5,6 +5,7 @@ import ReactDOM from "react-dom";
 
 class _NavBar extends React.Component {
     render() {
+        return
         <>
         </>
     }
