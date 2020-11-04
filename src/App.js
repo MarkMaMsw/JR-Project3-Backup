@@ -24,7 +24,7 @@ import { FootBar } from './components/Display/FootBar';
 function App() {
   return (
     <Router>
-      {/* <NavBar /> */}
+      <NavBar />
       <Switch>
         {/* User */}
         <Route path="/login" component={Login} /> {/* 登录页*/}
