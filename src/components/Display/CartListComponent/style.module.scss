@@ -64,10 +64,17 @@ $cart-background: #F5F5F5;
     }
 
     .cart__card--desc {
-        font-size: 0.8em;
+        font-size: 0.7em;
+        width: 30%;
     }
 
     .cart__card--price {
-        font-size: 0.75em;
+        width: 10%;
+        font-size: 0.55em;
+    }
+
+    .cart__card--img {
+        width: 35%;
+        margin-right: 1em;
     }
 }
