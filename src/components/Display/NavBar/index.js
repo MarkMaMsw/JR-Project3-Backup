@@ -3,12 +3,9 @@ import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 // import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faBars,
-  faShoppingBag,
-  faAngleRight,
-} from '@fortawesome/free-solid-svg-icons';
+import { faBars, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import Style from './style.module.scss';
+import { BlurBackground } from './../../Basic/BlurBackground';
 
 const RenderNavLinks = props => {
   return (
@@ -35,7 +32,6 @@ const RenderNavLinks = props => {
               </li>
             </ul>
           </div>
-          {/* <FontAwesomeIcon icon={faAngleRight} className={Style.angleIcon} /> */}
         </li>
         <li id={Style.menuTwo}>
           <a class={Style.menuLink}>Men</a>
@@ -52,7 +48,6 @@ const RenderNavLinks = props => {
               </li>
             </ul>
           </div>
-          {/* <FontAwesomeIcon icon={faAngleRight} className={Style.angleIcon} /> */}
         </li>
         <li id={Style.menuThree}>
           <a class={Style.menuLink}>Women</a>
@@ -69,7 +64,6 @@ const RenderNavLinks = props => {
               </li>
             </ul>
           </div>
-          {/* <FontAwesomeIcon icon={faAngleRight} className={Style.angleIcon} /> */}
         </li>
       </ul>
       <div className={Style.joinMessage}>
