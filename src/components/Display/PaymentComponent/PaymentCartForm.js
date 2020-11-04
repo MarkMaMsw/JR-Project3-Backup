@@ -1,7 +1,7 @@
 import React from 'react'
 import CategorySquareCard1 from '../CategorySquareCard1/index'
 import Style from './style.module.scss'
-import CartListComponent from '../CartListComponent/index'
+// import CartListComponent from '../CartListComponent/index'
 
 class PaymentCartForm extends React.Component {
     constructor() {
