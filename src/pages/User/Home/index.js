@@ -13,7 +13,6 @@ import ProductRectangleCard2 from '../../../components/Display/ProductRectangleC
 import Grid from '@material-ui/core/Grid';
 
 
-
 // function DotsMobileStepper() {
 //   // const classes = useStyles();
 //   const theme = useTheme();
@@ -191,6 +190,7 @@ componentDidMount() {
         </Grid>
       </Grid> */}
         </div>
+
       </React.Fragment>
     )
   }
