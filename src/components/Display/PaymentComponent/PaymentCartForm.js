@@ -15,7 +15,7 @@ class PaymentCartForm extends React.Component {
                     <h2>Shopping Cart</h2>
                 </div>
                 <div className={Style["payment__cart--body"]}>
-                    <CartListComponent/>
+                    {/* <CartListComponent/> */}
                 </div>
             </div>
             <div className={Style["payment__subtotal--container"]}>
