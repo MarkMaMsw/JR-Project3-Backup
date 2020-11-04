@@ -66,24 +66,23 @@ class AddressDetailsForm extends React.Component {
             />
         </div>
         <div className={Style["payment__details--address"]}>
-            <div className={Style["payment__container"]}>
-                <div className={`${Style["payment__region"]} 
-                ${Style["payment__region--country"]}`}>
-                    <label ref={formCountryLabelStyle}>Country</label>    
-                    <CountryDropdown
-                    ref={formCountryStyle}
-                    value={country}
-                    onChange={(val) => selectCountry(val)}/>
-                </div>
-                <div className={`${Style["payment__region"]} 
-                ${Style["payment__region--state"]}`}>
-                    <label ref={formStateLabelStyle}>State</label>
-                    <RegionDropdown 
-                    ref={formStateStyle}
-                    country={country}
-                    value={region}
-                    onChange={(val) => selectRegion(val)}/>
-                </div>
+            
+            <div className={`${Style["payment__region"]} 
+            ${Style["payment__detail"]}`}>
+                <label ref={formCountryLabelStyle}>Country</label>    
+                <CountryDropdown
+                ref={formCountryStyle}
+                value={country}
+                onChange={(val) => selectCountry(val)}/>
+            </div>
+            <div className={`${Style["payment__region"]} 
+            ${Style["payment__detail"]}`}>
+                <label ref={formStateLabelStyle}>State</label>
+                <RegionDropdown 
+                ref={formStateStyle}
+                country={country}
+                value={region}
+                onChange={(val) => selectRegion(val)}/>
             </div>
             <FormField
                 name="address"
