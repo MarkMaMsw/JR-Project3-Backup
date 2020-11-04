@@ -1,0 +1,52 @@
+.navbar {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.menu {
+  color: black;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3vh 5vw;
+  position: relative;
+}
+
+.menuItem {
+  @media only screen and (max-width: 1024px) {
+    position: absolute;
+    right: 0;
+    top: 75px;
+    background: red;
+    max-width: 320px;
+    flex-wrap: wrap;
+    //display:none;
+  }
+  // .item {
+  //   width: 100%;
+  // }
+}
+
+indicator {
+  background-color: black;
+  height: 5px;
+  // @media only screen and (max-width: 1024px) {
+  //   flex-wrap: wrap;
+  // }
+}
+
+.flexContainer {
+  flex-wrap: wrap;
+}
+
+.burgerMenu {
+  display: none !important;
+
+  @media only screen and (max-width: 1024px) {
+    display: block !important;
+  }
+}

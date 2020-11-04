@@ -18,11 +18,13 @@ import ProductManagement from "./pages/Admin/ProductManagement";
 import Example from "./pages/Example/";
 
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
-
+import { NavBar } from './components/Display/NavBar';
+import { FootBar } from './components/Display/FootBar';
 
 function App() {
   return (
     <Router>
+      <NavBar />
       <Switch>
         {/* User */}
         <Route path="/login" component={Login} /> {/* 登录页*/}
@@ -46,6 +48,7 @@ function App() {
         {/* Home should be putted last or the Route always porint to Home*/}
         <Route path="/" component={Homepage} /> {/* Home*/}
       </Switch>
+      <FootBar />
     </Router>
   );
 }
