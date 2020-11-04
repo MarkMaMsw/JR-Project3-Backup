@@ -36,11 +36,11 @@ body {
 }
 
 .payment__cart {
+    padding: 2em 3em;
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
 
 .payment__subtotal--container {
@@ -66,15 +66,10 @@ body {
 }
 
 .payment__cart--title {
-    padding: 0.5em 1.2em;
     text-transform: uppercase;
     font-size: 1.5em;
     letter-spacing: 2px;
-}
-
-.payment__cart--body {
-    display: flex;
-    flex-wrap: wrap;
+    margin-bottom: 1.5em;
 }
 
 .payment__panels {
@@ -302,10 +297,10 @@ body {
     .payment__subtotal--content {
         margin-right: 0.4em;
         h2 {
-            font-size: 1.2em;
+            font-size: 0.9em;
         }
         p {
-            font-size: 1.5em;
+            font-size: 1.2em;
         }
     }
 
