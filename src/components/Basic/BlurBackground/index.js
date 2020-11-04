@@ -1,11 +1,8 @@
 import React from 'react';
-import { Style } from './style.module.scss';
+import Style from './style.module.scss';
 
-class BlurBackground extends Component {
-  state = {};
-  render() {
-    return <div className={Style.blurBackground}></div>;
-  }
+function BlurBackground(props) {
+  return <div className={Style.blurBackground}>{props.children}</div>;
 }
 
 export default BlurBackground;
