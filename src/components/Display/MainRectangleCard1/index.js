@@ -58,37 +58,6 @@ class _MainRectangleCard1 extends React.Component{
     render(){
         const {name, price} = this.props;
         return <>
-<<<<<<< HEAD
-        <Grid item xs={12} sm={12} md = {10} >
-            <div className = {Style.container}>
-                    <div className={Style.rec_productContainer} onMouseMove={this.handleMove} onMouseOut={this.handleOut} >
-                        <div className = {Style.imgContainer}>
-                        <img ref={this.imgPath} src={this.props.imgPath} alt="shoes" className = {Style.rec_Product}/>
-                        </div>
-                        <div className = {Style.rec_productInfo}>
-                            <h4 className = {Style.mainrec_Name}>{name}</h4>
-                            <h4 className = {Style.mainrec_Price}>$ {price}</h4>
-                            <Button variant="outlined" className = {Style.mainrec_Button}>GET IT NOW<ArrowRightIcon /></Button>
-                        </div>
-                    </div>
-            </div>
-        </Grid>      
-||||||| merged common ancestors
-        <Grid item xs={12} sm={12} md = {10} >
-            <div className = {Style.container}>
-                    <div className = {Style.rec_productContainer} >
-                        <div className = {Style.imgContainer}>
-                        <img ref={this.imgPath} src={this.props.imgPath} alt="shoes" className = {Style.rec_Product}/>
-                        </div>
-                        <div className = {Style.rec_productInfo}>
-                            <h4 className = {Style.mainrec_Name}>{name}</h4>
-                            <h4 className = {Style.mainrec_Price}>$ {price}</h4>
-                            <Button variant="outlined" className = {Style.mainrec_Button}>GET IT NOW<ArrowRightIcon /></Button>
-                        </div>
-                    </div>
-            </div>
-        </Grid>      
-=======
         
        
         <Grid container >
@@ -110,7 +79,6 @@ class _MainRectangleCard1 extends React.Component{
         </Grid>
      
             
->>>>>>> 52bdb007f2b2ca0fbbe5c488c181f44f9687ba16
         </>
     }
 

@@ -1,24 +1,6 @@
-<<<<<<< HEAD
-// import React from "react";
-import Style from "./style.module.scss";
-||||||| merged common ancestors
-import React from "react";
-// import Style from "./style.module.scss";
-=======
 import React from 'react';
 // import Style from "./style.module.scss";
->>>>>>> 52bdb007f2b2ca0fbbe5c488c181f44f9687ba16
 import { withRouter } from 'react-router-dom';
-<<<<<<< HEAD
-import React from 'react';
-
-
-
-    
-
-||||||| merged common ancestors
-// import ReactDOM from "react-dom";
-=======
 // import ReactDOM from "react-dom";
 import PropTypes from 'prop-types';
 import {
@@ -33,45 +15,14 @@ import {
 import LocalMallIcon from '@material-ui/icons/LocalMall';
 import MenuIcon from '@material-ui/icons/Menu';
 import Style from './style.module.scss';
->>>>>>> 52bdb007f2b2ca0fbbe5c488c181f44f9687ba16
 
-<<<<<<< HEAD
-class _NavBar extends React.Component {
-    constructor(props) { 
-        super(props)
-        this.state = {
-        }
-    }
-    render() {
-        return (
-            <div>    
-            </div>
-            
-        );
-    }
-||||||| merged common ancestors
-class _NavBar extends React.Component {
-    render() {
-        return <>
-        </>
-    }
-=======
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
     'aria-controls': `simple-tabpanel-${index}`,
   };
->>>>>>> 52bdb007f2b2ca0fbbe5c488c181f44f9687ba16
 }
 
-<<<<<<< HEAD
-const NavBar = withRouter(_NavBar);
-export { NavBar };
-||||||| merged common ancestors
-const FootBar = withRouter(_NavBar);
-
-export { FootBar };
-=======
 const useStyles = makeStyles(theme => ({
   appbar: {
     boxShadow: 'none',
@@ -154,4 +105,3 @@ export default function _NavBar() {
 const NavBar = withRouter(_NavBar);
 
 export { NavBar };
->>>>>>> 52bdb007f2b2ca0fbbe5c488c181f44f9687ba16
