@@ -43,7 +43,7 @@ const CardInfoField = ({ price, onSuccessfulCheckout }) => {
         console.log(confirmCardPayment)
     }
 
-    return <form onSubmit={ onSuccessfulCheckout }>
+    return <form onSubmit={ handleFormSubmit, onSuccessfulCheckout }>
         <div className={`${Style["payment__detail"]} ${Style["payment__detail-card"]}`}>
             
             <CardElement options={cardElementOption} />

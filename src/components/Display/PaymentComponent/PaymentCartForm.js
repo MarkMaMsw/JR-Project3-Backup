@@ -1,7 +1,6 @@
 import React from 'react'
-import CategorySquareCard1 from '../CategorySquareCard1/index'
 import Style from './style.module.scss'
-// import CartListComponent from '../CartListComponent/index'
+import CartListComponent from '../CartListComponent/index'
 
 class PaymentCartForm extends React.Component {
     constructor() {
@@ -15,7 +14,7 @@ class PaymentCartForm extends React.Component {
                     <h2>Shopping Cart</h2>
                 </div>
                 <div className={Style["payment__cart--body"]}>
-                    {/* <CartListComponent/> */}
+                    <CartListComponent/>
                 </div>
             </div>
             <div className={Style["payment__subtotal--container"]}>
