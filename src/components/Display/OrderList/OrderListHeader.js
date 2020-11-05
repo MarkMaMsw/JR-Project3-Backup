@@ -1,8 +1,9 @@
 import React from 'react'
+import Style from './style.module.scss'
 
 function OrderListHeader() {
     return(
-		<div className="orderListHeader">
+		<div className={Style.orderListHeader}>
 			<div className="col-5"> {"ITEMS & DESCRIPTION"}</div>
 
 			<div className="col-4"> 
