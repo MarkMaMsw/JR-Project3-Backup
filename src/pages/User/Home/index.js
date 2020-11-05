@@ -12,7 +12,6 @@
 // import {ProductRectangleCard2} from '../../../components/Display/ProductRectangleCard2/index.js';
 // import Grid from '@material-ui/core/Grid';
 
-
 // // function DotsMobileStepper() {
 // //   // const classes = useStyles();
 // //   const theme = useTheme();
@@ -53,7 +52,7 @@
 // // }
 
 // // class Slide extends React.Component {
-// //   constructor(props) { 
+// //   constructor(props) {
 // //     super(props)
 // //     this.state = {
 // //       index: this.props.index,
@@ -64,7 +63,7 @@
 // //   render() {
 // //     return (
 // //       <div className={Style.scroller} >
-// //           {product_list.map((src,index) => { 
+// //           {product_list.map((src,index) => {
 // //             return (<div className={Style.productInfo} index={index} src={src} onMouseMove={this.getIndex}>
 // //               <div  className={Style.productInfo__img_container}><img key={index} src={require(`${src}`)} alt='hhhh' /></div>
 // //               <div  className={Style.productInfo__text_container}>
@@ -83,25 +82,24 @@
 // //    }
 // // }
 
-// // class ProductBigBox extends React.Component { 
+// // class ProductBigBox extends React.Component {
 // //   constructor(props){
 // //     super(props)
 // //     this.state = {
 // //     }
 // //   }
 
-// //   render() { 
+// //   render() {
 // //     return (
 // //       <div className={Style.homeContainer__productBigBox} onMouseMove={this.showTitle}>
 // //         {this.props.title}
-// //       </div>     
+// //       </div>
 // //     )
 // //   }
 // // }
 
-
-// class Homepage extends React.Component { 
-//   constructor(props) { 
+// class Homepage extends React.Component {
+//   constructor(props) {
 //     super(props)
 //     this.state = {
 //       index: 0,
@@ -122,8 +120,7 @@
 //     })
 //   }
 
-
-// componentWillMount() { 
+// componentWillMount() {
 //   this.setState({
 //     index: 1,
 //     path: require("../../../images/shoes/4d-run-1.0-parley-shoes.png"),
@@ -132,7 +129,7 @@
 //   })
 // }
 
-// componentDidMount() { 
+// componentDidMount() {
 //   this.timer = setInterval(() => {
 //     let { index } = this.state;
 //     index += 1;
@@ -146,11 +143,11 @@
 //   }, 5000);
 // }
 
-//   componentWillUnmount() { 
+//   componentWillUnmount() {
 //     clearInterval(this.timer);
 //   }
 
-//   render() { 
+//   render() {
 //     return (
 //       <React.Fragment>
 //         <NavBar />
@@ -196,104 +193,104 @@
 //   }
 // }
 
-
 // export default Homepage;
 
-import React from 'react'
-import HomepageImg from './nike-homepage.png'
-import Style from './style.module.scss'
-import ControlledCarousel from '../../../components/Display/ControlledCarousel'
-
+import React from 'react';
+import HomepageImg from './nike-homepage.png';
+import Style from './style.module.scss';
+import ControlledCarousel from '../../../components/Display/ControlledCarousel';
 
 class Homepage extends React.Component {
+  //read from database later
+  homepageProducts = [
+    {
+      name: 'Nike Blazer Mid',
+      imgPath: require('../../../images/shoes/4d-run-1.0-parley-shoes.png'),
+      price: '100',
+      rate: '3.4',
+      numofColor: '4',
+    },
 
-//read from database later
-homepageProducts = [
-  {
-    name: "Nike Blazer Mid",
-    imgPath: require("../../../images/shoes/4d-run-1.0-parley-shoes.png"),
-    price: "100",
-    rate: "3.4",
-    numofColor: "4"
-  },
+    {
+      name: 'Nike Blazer Mid',
+      imgPath: require('../../../images/shoes/4d-run-1.0-parley-shoes.png'),
+      price: '100',
+      rate: '3.4',
+      numofColor: '4',
+    },
 
-  {
-    name: "Nike Blazer Mid",
-    imgPath: require("../../../images/shoes/4d-run-1.0-parley-shoes.png"),
-    price: "100",
-    rate: "3.4",
-    numofColor: "4"
-  },
+    {
+      name: 'White Bag Awesome',
+      imgPath: require('../../../images/shoes/zx-2k-4d-shoes.png'),
+      price: '300',
+      rate: '3.4',
+      numofColor: '4',
+    },
 
-  {
-    name: "White Bag Awesome",
-    imgPath: require("../../../images/shoes/zx-2k-4d-shoes.png"),
-    price: "300",
-    rate: "3.4",
-    numofColor: "4"
-  },
+    {
+      name: 'Nike Blazer Mid',
+      imgPath: require('../../../images/shoes/4d-run-1.0-parley-shoes.png'),
+      price: '100',
+      rate: '3.4',
+      numofColor: '4',
+    },
 
-  {
-    name: "Nike Blazer Mid",
-    imgPath: require("../../../images/shoes/4d-run-1.0-parley-shoes.png"),
-    price: "100",
-    rate: "3.4",
-    numofColor: "4"
-  },
-
-  {
-    name: "Blue Bag Awesome",
-    imgPath: require("../../../images/shoes/ultraboost-20-shoes.png"),
-    price: "200",
-    rate: "3.4",
-    numofColor: "4"
-  },
-  {
-    name: "Blue Bag Awesome",
-    imgPath: require("../../../images/shoes/ultraboost-20-shoes.png"),
-    price: "200",
-    rate: "3.4",
-    numofColor: "4"
-  },
-  {
-    name: "White Bag Awesome",
-    imgPath: require("../../../images/shoes/zx-2k-4d-shoes.png"),
-    price: "300",
-    rate: "3.4",
-    numofColor: "4"
-  },
-  {
-    name: "White Bag Awesome",
-    imgPath: require("../../../images/shoes/zx-2k-4d-shoes.png"),
-    price: "300",
-    rate: "3.4",
-    numofColor: "4"
-  }
-
-]
+    {
+      name: 'Blue Bag Awesome',
+      imgPath: require('../../../images/shoes/ultraboost-20-shoes.png'),
+      price: '200',
+      rate: '3.4',
+      numofColor: '4',
+    },
+    {
+      name: 'Blue Bag Awesome',
+      imgPath: require('../../../images/shoes/ultraboost-20-shoes.png'),
+      price: '200',
+      rate: '3.4',
+      numofColor: '4',
+    },
+    {
+      name: 'White Bag Awesome',
+      imgPath: require('../../../images/shoes/zx-2k-4d-shoes.png'),
+      price: '300',
+      rate: '3.4',
+      numofColor: '4',
+    },
+    {
+      name: 'White Bag Awesome',
+      imgPath: require('../../../images/shoes/zx-2k-4d-shoes.png'),
+      price: '300',
+      rate: '3.4',
+      numofColor: '4',
+    },
+  ];
 
   constructor() {
-    super()
+    super();
   }
 
   render() {
-    return <>
-      <div className={Style.homeContainer}>
-        <div className={Style.homeContainer__homeImgContainer}>
-          <img src={HomepageImg} alt={'Homepage'}></img>
+    return (
+      <>
+        <div className={Style.homeContainer}>
+          <div className={Style.homeContainer__homeImgContainer}>
+            <img src={HomepageImg} alt={'Homepage'}></img>
+          </div>
+          <div className={Style.homeContainer__sloganContainer}>
+            <h1>FIND THE MOST LOVED</h1>
+            <h2>
+              Our most popular and loved shoes for every styling, runing and
+              sports.
+            </h2>
+          </div>
+          <div className={Style.homeContainer__carouselContainer}>
+            <h3>Most Popular</h3>
+            <ControlledCarousel items={this.homepageProducts} />
+          </div>
         </div>
-        <div className={Style.homeContainer__sloganContainer}>
-          <h1>FIND THE MOST LOVED</h1>
-          <h2>Our most popular and loved shoes for every styling, runing and sports.</h2>
-        </div>
-        <div className={Style.homeContainer__carouselContainer}>
-          <h3>Most Popular</h3>
-          <ControlledCarousel items={this.homepageProducts}/>
-        </div>
-      </div>
-
-    </>
+      </>
+    );
   }
 }
 
-export default Homepage
+export default Homepage;

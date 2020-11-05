@@ -1,103 +1,147 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import Style from "./style.module.scss";
 import { withRouter } from 'react-router-dom';
 // import ReactDOM from "react-dom";
-import PropTypes from 'prop-types';
-import {
-  makeStyles,
-  AppBar,
-  Tabs,
-  Tab,
-  Typography,
-  Box,
-  IconButton,
-} from '@material-ui/core';
-import LocalMallIcon from '@material-ui/icons/LocalMall';
-import MenuIcon from '@material-ui/icons/Menu';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import Style from './style.module.scss';
 
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  };
-}
+const BlurBackgroundHover = props => {
+  return (
+    <div
+      className={props.isHover ? Style.blurMaskHover : Style.blurMaskUnHover}
+    ></div>
+  );
+};
 
-const useStyles = makeStyles(theme => ({
-  appbar: {
-    boxShadow: 'none',
-  },
-  indicator: {
-    backgroundColor: 'black',
-    height: '5px',
-  },
-  tab: {
-    fontSize: '1.4rem',
-  },
-  icon: {
-    height: '50px',
-  },
-  grayBar: {
-    height: '8vh',
-    backgroundColor: '#f5f5f5',
-  },
-}));
+const BlurBackground = props => {
+  return (
+    <div
+      className={
+        props.open
+          ? [Style.blurMask, Style.blurMaskOpen].join(' ')
+          : [Style.blurMask, Style.blurMaskClosed].join(' ')
+      }
+    ></div>
+  );
+};
 
-export default function _NavBar() {
-  const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+const RenderNavLinks = props => {
+  return (
+    <div
+      className={
+        props.open
+          ? [Style.menu__section, Style.menuSectionOpen].join(' ')
+          : [Style.menu__section, Style.menuSectionClosed].join(' ')
+      }
+    >
+      <ul className={Style.menuList}>
+        <li
+          id={Style.menuOne}
+          // onMouseEnter={() => props.setIsHover(!props.isHover)}
+          // onMouseLeave={() => props.setIsHover(props.isHover)}
+        >
+          <a class={Style.menuLink}>Most Popular</a>
+          <div id={Style.subMenuOne} className={Style.subMenuWrapper}>
+            <ul className={Style.subMenuList}>
+              <li>
+                <a>Lifestyle</a>
+              </li>
+              <li>
+                <a>Running</a>
+              </li>
+              <li>
+                <a>Basketball</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li id={Style.menuTwo}>
+          <a class={Style.menuLink}>Men</a>
+          <div id={Style.subMenuTwo} className={Style.subMenuWrapper}>
+            <ul className={Style.subMenuList}>
+              <li>
+                <a>Lifestyle</a>
+              </li>
+              <li>
+                <a>Running</a>
+              </li>
+              <li>
+                <a>Basketball</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li id={Style.menuThree}>
+          <a class={Style.menuLink}>Women</a>
+          <div id={Style.subMenuThree} className={Style.subMenuWrapper}>
+            <ul className={Style.subMenuList}>
+              <li>
+                <a>Lifestyle</a>
+              </li>
+              <li>
+                <a>Running</a>
+              </li>
+              <li>
+                <a>Basketball</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div className={Style.joinMessage}>
+        Become our member for the best products, inspiration and stories in
+        Sports.
+        <a> Learn more</a>
+      </div>
+    </div>
+  );
+};
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+const ShowBurgerMenu = props => {
+  return (
+    <button
+      className={Style.burgerMenu}
+      onClick={() => props.setOpen(!props.open)}
+    >
+      <FontAwesomeIcon icon={faBars} />
+    </button>
+  );
+};
+
+function _NavBar() {
+  const [open, setOpen] = useState(false);
+  // const [isHover, setIsHover] = useState(false);
 
   return (
-    <div className={Style.navbar}>
-      <AppBar className={classes.appbar} position="static">
-        <Box className={classes.grayBar} />
-        <Box className={Style.menu}>
-          <img src="favicon.ico" className={classes.icon} />
-          <div className={Style.menuItem}>
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              classes={{
-                indicator: classes.indicator,
-              }}
-            >
-              <Tab
-                className={[classes.tab, Style.item].join(' ')}
-                disableRipple
-                label="Most Popular"
-                {...a11yProps(0)}
-              />
-              <Tab
-                className={[classes.tab, Style.item].join(' ')}
-                disableRipple
-                label="Men"
-                {...a11yProps(1)}
-              />
-              <Tab
-                className={[classes.tab, Style.item].join(' ')}
-                disableRipple
-                label="Women"
-                {...a11yProps(2)}
-              />
-            </Tabs>
+    <div>
+      {/* <BlurBackgroundHover isHover={isHover} /> */}
+      <div className={Style.blurMaskHoverTry}></div>
+      <div className={Style.navbar}>
+        <BlurBackground open={open} />
+        <div className={Style.navbar__top}>
+          <div className={Style.navbar__top__item}>Join Us</div>
+          <span className={Style.navbar__top__divider}>|</span>
+          <div className={Style.navbar__top__item}>Sign In</div>
+        </div>
+        <div className={Style.navbar__bottom}>
+          <div className={Style.logo__section}>
+            <img src="favicon.ico" className={Style.logo} />
           </div>
-          <div>
-            <IconButton classes={{ label: Style.burgerMenu }}>
-              <MenuIcon fontSize="large" />
-            </IconButton>
-            <IconButton aria-label="account">
-              <LocalMallIcon fontSize="large" />
-            </IconButton>
+          <RenderNavLinks
+            open={open}
+            // isHover={isHover}
+            // setIsHover={setIsHover}
+          />
+          <div className={Style.icon__section}>
+            <ShowBurgerMenu open={open} setOpen={setOpen} />
+            <a>
+              <FontAwesomeIcon icon={faShoppingBag} />
+            </a>
           </div>
-        </Box>
-      </AppBar>
-      <Box>
-        <Box className={classes.grayBar} />
-      </Box>
+        </div>
+        <div className={Style.banner__section}></div>
+      </div>
     </div>
   );
 }
