@@ -8,7 +8,7 @@ const SignInSignUpComplete = () => {
         <Grid container justify="center" className={styles.contact_body}>
             <Grid item xs={12} md={6} container justify="center" className={styles.card_left} alignContent="center">
                 <Grid xs={8} className={styles.card_content_left}>
-                    <h1>Welcome!</h1>
+                    <h1 className={styles.aligncenter}>Welcome!</h1>
                 </Grid>
             </Grid>
 

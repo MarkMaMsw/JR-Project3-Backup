@@ -60,11 +60,14 @@
 .sendbtn:hover{
     background-color: #eb5f6f;
 }
-.steart_shopping_btn{
+.start_shopping_btn{
     @extend %button-shared;
     width: 300px;
     margin-top: 70px;
 }
-.steart_shopping_btn:hover{
+.start_shopping_btn:hover{
     background-color: #eb5f6f;
+}
+.aligncenter{
+    text-align: center;
 }
