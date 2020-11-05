@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Homepage from "./pages/User/Home";
+import Home from "./pages/User/Home";
 import Category from "./pages/User/Category";
 import Login from "./pages/User/Login";
 import Order from "./pages/User/Order";
@@ -18,13 +18,11 @@ import ProductManagement from "./pages/Admin/ProductManagement";
 import Example from "./pages/Example/";
 
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
-import { NavBar } from './components/Display/NavBar';
-import { FootBar } from './components/Display/FootBar';
+
 
 function App() {
   return (
     <Router>
-      <NavBar />
       <Switch>
         {/* User */}
         <Route path="/login" component={Login} /> {/* 登录页*/}
@@ -46,9 +44,8 @@ function App() {
         <Route path="/example" component={Example} /> {/* 订单更新页*/}
 
         {/* Home should be putted last or the Route always porint to Home*/}
-        <Route path="/" component={Homepage} /> {/* Home*/}
+        <Route path="/" component={Home} /> {/* Home*/}
       </Switch>
-      <FootBar />
     </Router>
   );
 }
