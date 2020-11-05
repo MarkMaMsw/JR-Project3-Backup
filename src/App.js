@@ -18,8 +18,7 @@ import ProductManagement from './pages/Admin/ProductManagement';
 import Example from './pages/Example/';
 
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
-import { NavBar } from './components/Display/NavBar';
-import { FootBar } from './components/Display/FootBar';
+
 
 function App() {
   return (
