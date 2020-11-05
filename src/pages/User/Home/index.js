@@ -1,9 +1,14 @@
 import React from 'react';
-import BlurBackground from './../../../components/Basic/BlurBackground';
+import { NavBar } from '../../../components/Display/NavBar';
 import Style from './style.module.scss';
 
 function Home() {
-  return <p className={Style.home}>Home</p>;
+  return (
+    <div>
+      <NavBar />
+      <div>Home</div>
+    </div>
+  );
 }
 
 export default Home;

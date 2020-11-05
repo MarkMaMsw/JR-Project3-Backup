@@ -20,13 +20,10 @@ import Example from './pages/Example/';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import { NavBar } from './components/Display/NavBar';
 import { FootBar } from './components/Display/FootBar';
-import BlurBackground from './components/Basic/BlurBackground';
 
 function App() {
   return (
     <Router>
-      <NavBar />
-      {/* <BlurBackground> */}
       <Switch>
         {/* User */}
         <Route path="/login" component={Login} /> {/* 登录页*/}
@@ -51,8 +48,6 @@ function App() {
         {/* Home should be putted last or the Route always porint to Home*/}
         <Route path="/" component={Home} /> {/* Home*/}
       </Switch>
-      {/* </BlurBackground> */}
-      <FootBar />
     </Router>
   );
 }
