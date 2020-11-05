@@ -1,0 +1,70 @@
+.contact_body{
+    height: 900px;
+    background-color: lightgrey;
+}
+.card_left{
+    background-color:#ED2E44;
+}
+.card_content_left{
+    color: #fff;
+    height: auto;
+}
+.card_content_left>h1{
+    font-size: 45px;
+}
+.card_content_left>p{
+    font-size: 20px;
+}
+.card_right{
+    background-color: #fff;
+}
+.card_content_right{
+    height: auto;
+    text-align: center;
+}
+.card_content_right>p{
+    font-size: 20px;
+}
+.inputbox, .textbox{
+    width: 100%;
+    background-color: #F5F5F5;
+    border: none;
+    padding: 20px;
+    margin: 15px 0;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+.inputbox{
+    height: 60px;
+}
+.textbox{
+    resize: none;
+    height: 280px;
+}
+
+%button-shared{
+    border: none;
+    width: 220px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #ED2E44;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+.sendbtn{
+    @extend %button-shared;
+    width: 220px;
+}
+.sendbtn:hover{
+    background-color: #eb5f6f;
+}
+.steart_shopping_btn{
+    @extend %button-shared;
+    width: 300px;
+    margin-top: 70px;
+}
+.steart_shopping_btn:hover{
+    background-color: #eb5f6f;
+}

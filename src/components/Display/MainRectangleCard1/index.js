@@ -22,6 +22,13 @@ class _MainRectangleCard1 extends React.Component{
             price: 0, 
         }
     }
+    handleMove = (event) => {
+        this.props.parent.componentWillUnmount();
+    }
+    
+    handleOut = (event) => {
+        this.props.parent.componentDidMount()
+      }
 
     componentDidMount(){
         const { newrec_ContainerStyle, newimgContainerStyle, newrec_NameStyle, newrec_PriceStyle, newrec_ButtonStyle} = this.props;

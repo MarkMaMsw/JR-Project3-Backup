@@ -1,15 +1,16 @@
 import React from "react";
 import Style from "./style.module.css";
 import { withRouter } from 'react-router-dom';
-import ReactDOM from "react-dom";
 
-class _NavBar extends React.Component {
+class _NavSearch extends React.Component {
     render() {
-        <>
-        </>
+        return (
+            <div>
+            </div>
+        )
     }
 }
 
-const NavBar = withRouter(_NavBar);
+const NavSearch = withRouter(_NavSearch);
 
-export { NavBar };
+export { NavSearch };
