@@ -1,0 +1,12 @@
+$checkout-button-color: #4F73E6;
+$button-text-color: #fff;
+
+.checkoutButton {
+    width: 100%;
+    height: 65px;
+    border-radius: 5px;
+    background-color: $checkout-button-color;
+    color: $button-text-color;
+    font-size: 1.1em;
+    font-weight: 500;
+}
