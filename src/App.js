@@ -18,7 +18,7 @@ import ProductManagement from './pages/Admin/ProductManagement';
 import Example from './pages/Example/';
 
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
-
+import { FootBar } from './components/Display/FootBar';
 
 function App() {
   return (
