@@ -64,7 +64,9 @@ $cart-background: #F5F5F5;
     }
 
     .cart__card--desc {
-        font-size: 0.7em;
+        h3 {
+            font-size: 0.7em;
+        }
         width: 30%;
     }
 

@@ -16,7 +16,7 @@ class CartListCard extends React.Component {
             </div>
             <div className={Style["cart__card--desc"]}>
                 <div className={Style["cart__card--container"]}>
-                <h3 className={Style["cart__card--title"]}>{title}</h3>
+                    <h3 className={Style["cart__card--title"]}>{title}</h3>
                     <h3 className={Style["cart__card--size"]}>{size}</h3>
                 </div>
             </div>
