@@ -38,8 +38,8 @@ const RenderNavLinks = props => {
       <ul className={Style.menuList}>
         <li
           id={Style.menuOne}
-          // onMouseEnter={() => props.setIsHover(!props.isHover)}
-          // onMouseLeave={() => props.setIsHover(props.isHover)}
+          onMouseEnter={() => props.setIsHover(true)}
+          onMouseLeave={() => props.setIsHover(false)}
         >
           <a class={Style.menuLink}>Most Popular</a>
           <div id={Style.subMenuOne} className={Style.subMenuWrapper}>
@@ -111,11 +111,11 @@ const ShowBurgerMenu = props => {
 
 function _NavBar() {
   const [open, setOpen] = useState(false);
-  // const [isHover, setIsHover] = useState(false);
+  const [isHover, setIsHover] = useState(false);
 
   return (
-    <div>
-      {/* <BlurBackgroundHover isHover={isHover} /> */}
+    <div className={Style.navLayout}>
+      <BlurBackgroundHover isHover={isHover} />
       <div className={Style.blurMaskHoverTry}></div>
       <div className={Style.navbar}>
         <BlurBackground open={open} />
@@ -130,8 +130,8 @@ function _NavBar() {
           </div>
           <RenderNavLinks
             open={open}
-            // isHover={isHover}
-            // setIsHover={setIsHover}
+            isHover={isHover}
+            setIsHover={setIsHover}
           />
           <div className={Style.icon__section}>
             <ShowBurgerMenu open={open} setOpen={setOpen} />
@@ -148,4 +148,4 @@ function _NavBar() {
 
 const NavBar = withRouter(_NavBar);
 
-export { NavBar };
+export default NavBar;

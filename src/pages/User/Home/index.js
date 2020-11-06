@@ -199,6 +199,7 @@ import React from 'react';
 import HomepageImg from './nike-homepage.png';
 import Style from './style.module.scss';
 import ControlledCarousel from '../../../components/Display/ControlledCarousel';
+import Navbar from '../../../components/Display/NavBar/index';
 
 class Homepage extends React.Component {
   //read from database later
@@ -272,6 +273,7 @@ class Homepage extends React.Component {
   render() {
     return (
       <>
+        <Navbar />
         <div className={Style.homeContainer}>
           <div className={Style.homeContainer__homeImgContainer}>
             <img src={HomepageImg} alt={'Homepage'}></img>
