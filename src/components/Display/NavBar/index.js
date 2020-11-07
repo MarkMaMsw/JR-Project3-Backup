@@ -11,6 +11,7 @@ const BlurBackgroundHover = props => {
     <div
       className={props.isHover ? Style.blurMaskHover : Style.blurMaskUnHover}
     ></div>
+    // <div className={Style.blurMaskHover}></div>
   );
 };
 
@@ -114,35 +115,38 @@ function _NavBar() {
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <div className={Style.navLayout}>
+    <>
       <BlurBackgroundHover isHover={isHover} />
-      <div className={Style.blurMaskHoverTry}></div>
-      <div className={Style.navbar}>
-        <BlurBackground open={open} />
-        <div className={Style.navbar__top}>
-          <div className={Style.navbar__top__item}>Join Us</div>
-          <span className={Style.navbar__top__divider}>|</span>
-          <div className={Style.navbar__top__item}>Sign In</div>
-        </div>
-        <div className={Style.navbar__bottom}>
-          <div className={Style.logo__section}>
-            <img src="favicon.ico" className={Style.logo} />
+      <div className={Style.navLayout}>
+        {/* <BlurBackgroundHover isHover={isHover} /> */}
+        <div className={Style.blurMaskHoverTry}></div>
+        <div className={Style.navbar}>
+          <BlurBackground open={open} />
+          <div className={Style.navbar__top}>
+            <div className={Style.navbar__top__item}>Join Us</div>
+            <span className={Style.navbar__top__divider}>|</span>
+            <div className={Style.navbar__top__item}>Sign In</div>
           </div>
-          <RenderNavLinks
-            open={open}
-            isHover={isHover}
-            setIsHover={setIsHover}
-          />
-          <div className={Style.icon__section}>
-            <ShowBurgerMenu open={open} setOpen={setOpen} />
-            <a>
-              <FontAwesomeIcon icon={faShoppingBag} />
-            </a>
+          <div className={Style.navbar__bottom}>
+            <div className={Style.logo__section}>
+              <img src="favicon.ico" className={Style.logo} />
+            </div>
+            <RenderNavLinks
+              open={open}
+              isHover={isHover}
+              setIsHover={setIsHover}
+            />
+            <div className={Style.icon__section}>
+              <ShowBurgerMenu open={open} setOpen={setOpen} />
+              <a>
+                <FontAwesomeIcon icon={faShoppingBag} />
+              </a>
+            </div>
           </div>
+          <div className={Style.banner__section}></div>
         </div>
-        <div className={Style.banner__section}></div>
       </div>
-    </div>
+    </>
   );
 }
 

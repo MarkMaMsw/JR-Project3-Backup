@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .navbar {
@@ -213,13 +212,13 @@
 }
 
 .blurMaskHover {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   position: absolute;
   backdrop-filter: blur(4px);
   visibility: visible;
   z-index: 0;
-  background-color: red;
+  // background-color: red;
 }
 
 .blurMaskUnHover {
