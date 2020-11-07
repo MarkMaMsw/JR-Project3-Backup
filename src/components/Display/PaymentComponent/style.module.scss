@@ -8,6 +8,7 @@ $background-color: #2E3749;
     color: $label-text-color;
     margin-bottom: 0.5em;
     font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 @mixin input() {
@@ -23,6 +24,7 @@ $background-color: #2E3749;
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -36,11 +38,11 @@ body {
 }
 
 .payment__cart {
+    padding: 2em 1em;
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
 
 .payment__subtotal--container {
@@ -58,23 +60,20 @@ body {
         font-size: 1.5em;
         text-transform: uppercase;
         color: $label-text-color;
+        font-family: Arial, Helvetica, sans-serif;
     }
     p {
         font-size: 2.1em;
         font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
     }
 }
 
 .payment__cart--title {
-    padding: 0.5em 1.2em;
     text-transform: uppercase;
     font-size: 1.5em;
     letter-spacing: 2px;
-}
-
-.payment__cart--body {
-    display: flex;
-    flex-wrap: wrap;
+    margin-bottom: 1.5em;
 }
 
 .payment__panels {
@@ -85,7 +84,7 @@ body {
 
 .payment__checkout-panel {
     background-color: $background-color;
-    width: 32%;
+    width: 45%;
     padding: 3em 3.5em;
     border-radius: 10px;
     box-shadow: 0px 9px 9px #2E3749;
@@ -97,6 +96,7 @@ body {
     font-size: 1.95em;
     letter-spacing: 2px;
     margin-bottom: 2.5em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .payment__details--basic {
@@ -140,7 +140,7 @@ body {
     border-radius: 10px;
     background-color: $background-color;
     color: $title-text-color;
-    padding: 4em 5em;
+    padding: 7em 5em;
     text-align: center;
     box-shadow: 0px 9px 9px #2E3749;
     display: flex;
@@ -150,16 +150,18 @@ body {
 
 .payment__success--header {
     h1 {
-        font-size: 3.5em;
+        font-size: 2.7em;
         font-weight: 500;
-        margin-bottom: 0.1em;
+        margin-bottom: 0.65em;
         letter-spacing: 3px;
+        font-family: Arial, Helvetica, sans-serif;
         
     }
     h2 {
         font-size: 2.0em;
         font-weight: 400;
         line-height: 1.35em;
+        font-family: Arial, Helvetica, sans-serif;
     }
 }
 
@@ -175,18 +177,24 @@ body {
 
 .payment__success--link li {
     list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .payment__success--link li:first-child a {
     color: $title-text-color;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .payment__success--link li:last-child a {
     color: red;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .payment__success--text {
     font-size: 1.5em;
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+    }
 }
 
 @media screen and (max-width: 1270px) {
@@ -206,9 +214,9 @@ body {
     }
 
     .payment__success {
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
-        height: 350px;
+        height: 500px;
         padding: 4.5em 2.5em;
     }
 
@@ -255,18 +263,18 @@ body {
 @media screen and (max-width: 750px) {
     .payment__panels {
         display: block;
-        width: 80%;
+        width: 90%;
     }
 
     .payment__cart {
-        width: 80%;
+        width: 90%;
         margin: 3em auto;
     }
 
     .payment__checkout-panel {
         padding: 1em 1.5em;
         margin: 3em auto;
-        width: 85%;
+        width: 95%;
     }
 
     .payment__title {
@@ -302,18 +310,18 @@ body {
     .payment__subtotal--content {
         margin-right: 0.4em;
         h2 {
-            font-size: 1.2em;
+            font-size: 0.9em;
         }
         p {
-            font-size: 1.5em;
+            font-size: 1.2em;
         }
     }
 
     .payment__success {
         padding: 2.5em 1.4em;
-        width: 80%;
+        width: 95%;
         margin: 0 auto;
-        height: 230px;
+        height: 240px;
     }
 
     .payment__success--link {
