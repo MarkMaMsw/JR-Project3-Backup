@@ -2,9 +2,6 @@ import React from "react"
 import Style from "./style.module.scss"
 
 class DeliveryPrice extends React.Component {
-    constructor() {
-        super()
-    }
 
     render() {
         const { price } = this.props

@@ -6,10 +6,6 @@ import DeliveryNotice from "./DeliveryNotice"
 import DeliveryPrice from "./DeliveryPrice"
 
 class DeliverForm extends React.Component {
-    constructor() {
-        super()
-    }
-
     render() {
         const { handleChange, charactername, deliverymessage } = this.props
         return <div className={Style["payment__delivery"]}>

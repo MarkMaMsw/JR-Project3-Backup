@@ -2,10 +2,6 @@ import React from "react"
 import Style from "./style.module.scss"
 
 class DeliveryNotice extends React.Component {
-    constructor() {
-        super()
-    }
-
     render() {
         return <div className={Style["payment__delivery--notice"]}>
             <h3>NOTICE:</h3>

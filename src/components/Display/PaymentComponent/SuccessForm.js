@@ -3,9 +3,6 @@ import Style from './style.module.scss'
 import { withRouter } from 'react-router-dom';
 
 class _SuccessForm extends React.Component {
-    constructor() {
-        super()
-    }
 
     successGoTo = () => {
         this.props.history.push('/Home')

@@ -4,10 +4,6 @@ import FormField from './FormField'
 import Style from './style.module.scss'
 
 class CardDetailsForm extends React.Component {
-    constructor() {
-        super()
-    }
-
     render() {
         const { 
             fullname,

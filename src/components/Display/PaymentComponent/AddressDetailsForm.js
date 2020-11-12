@@ -4,9 +4,6 @@ import Style from './style.module.scss'
 import { CountryDropdown, RegionDropdown } from 'react-country-region-selector'
 
 class AddressDetailsForm extends React.Component {
-    constructor() {
-        super()
-    }
 
     render() {
         const {

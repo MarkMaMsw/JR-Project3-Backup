@@ -3,9 +3,6 @@ import Style from './style.module.scss'
 import CartListComponent from '../CartListComponent/index'
 
 class PaymentCartForm extends React.Component {
-    constructor() {
-        super()
-    }
 
     render() {
         return <div className={Style["payment__cart"]}>
