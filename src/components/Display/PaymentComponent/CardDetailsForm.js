@@ -9,7 +9,11 @@ class CardDetailsForm extends React.Component {
     }
 
     render() {
-        const { nameOnCard, 
+        const { 
+            fullname,
+            email,
+            phone,
+            nameOnCard, 
             handleChange, 
             formRightStyle, 
             formCardLabelStyle, 
@@ -18,6 +22,41 @@ class CardDetailsForm extends React.Component {
             onSuccessfulCheckout } = this.props
         return <div ref={formRightStyle} className={Style["payment__checkout-panel"]}>
             <h2 className={Style["payment__title"]}>Card Details</h2>
+            <div className={Style["payment__details--basic"]}>
+                <FormField
+                    name="fullname"
+                    label="Full name"
+                    type="text"
+                    value={fullname}
+                    onChange={handleChange}
+                    placeholder="Jane Doe"
+                    labelStyle={labelStyle}
+                    inputStyle={inputStyle}
+                    required
+                />
+                <FormField
+                    name="phone"
+                    label="Phone number"
+                    type="text"
+                    value={phone}
+                    onChange={handleChange}
+                    placeholder="0402182222"
+                    labelStyle={labelStyle}
+                    inputStyle={inputStyle}
+                    required
+                />
+                <FormField
+                    name="email"
+                    label="Email address"
+                    type="text"
+                    value={email}
+                    onChange={handleChange}
+                    placeholder="Thomas@gmail.com"
+                    labelStyle={labelStyle}
+                    inputStyle={inputStyle}
+                    required
+                />
+            </div>
             <div className={Style["payment__details--card"]}>
                 <FormField
                     name="nameOnCard"

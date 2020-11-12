@@ -10,3 +10,9 @@ $button-text-color: #fff;
     font-size: 1.1em;
     font-weight: 500;
 }
+
+@media screen and (max-width: 500px) {
+    .checkoutButton {
+        font-size: 0.8em;
+    }
+}
