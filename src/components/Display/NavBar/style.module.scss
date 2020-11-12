@@ -442,19 +442,30 @@ $second-text-color: #ffa300;
   top: 56px;
   box-shadow: unset;
   border: 0;
-  padding-top: 16px;
-  // border-top: 1px solid yellow;
+
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+.dropdownItem {
+  padding: 10px;
 }
 
 .dropdownLabel {
   display: flex;
   align-items: center;
+  font-size: 14px;
 }
 
 .dropdownIcon {
   font-size: 24px;
   color: #b3b3b3;
   margin-right: 20px;
+}
+
+.dropdownInput {
+  display: none;
 }
 
 /*---------- Account ----------*/

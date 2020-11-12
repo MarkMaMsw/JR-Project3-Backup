@@ -180,14 +180,20 @@ function _NavBar() {
                   Games<span> ▾ </span>
                 </label>
                 <div className={Style.dropdownContent}>
-                  <ul className={Style.dropdownList}>
+                  <ul>
                     <li className={Style.dropdownItem}>
-                      <label className={Style.dropdownLabel}>
+                      <label className={Style.dropdownLabel} for="dropAccount">
                         <FontAwesomeIcon
                           icon={faUserCircle}
                           className={Style.dropdownIcon}
                         />
+                        Account
                       </label>
+                      <input
+                        type="checkbox"
+                        id="dropAccount"
+                        className={Style.dropdownInput}
+                      />
                     </li>
                   </ul>
                 </div>
