@@ -199,7 +199,8 @@ import React from 'react';
 import HomepageImg from './nike-homepage.png';
 import Style from './style.module.scss';
 import ControlledCarousel from '../../../components/Display/ControlledCarousel';
-
+import { FootBar } from '../../../components/Display/FootBar';
+import { NavBar } from '../../../components/Display/NavBar';
 class Homepage extends React.Component {
   //read from database later
   homepageProducts = [
@@ -272,6 +273,7 @@ class Homepage extends React.Component {
   render() {
     return (
       <>
+        <NavBar />
         <div className={Style.homeContainer}>
           <div className={Style.homeContainer__homeImgContainer}>
             <img src={HomepageImg} alt={'Homepage'}></img>
@@ -288,6 +290,7 @@ class Homepage extends React.Component {
             <ControlledCarousel items={this.homepageProducts} />
           </div>
         </div>
+        <FootBar />
       </>
     );
   }
