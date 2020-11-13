@@ -87,6 +87,10 @@ $primary-text-color: #ffa300;
 
 #footer {
   background-color: #141922;
+
+  a {
+    cursor: pointer;
+  }
 }
 
 .footerTop {
