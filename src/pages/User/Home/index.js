@@ -199,6 +199,7 @@ import React from 'react';
 import HomepageImg from './nike-homepage.png';
 import Style from './style.module.scss';
 import ControlledCarousel from '../../../components/Display/ControlledCarousel';
+import { FootBar } from '../../../components/Display/FootBar';
 import { NavBar } from '../../../components/Display/NavBar';
 class Homepage extends React.Component {
   //read from database later
@@ -289,6 +290,7 @@ class Homepage extends React.Component {
             <ControlledCarousel items={this.homepageProducts} />
           </div>
         </div>
+        <FootBar />
       </>
     );
   }
