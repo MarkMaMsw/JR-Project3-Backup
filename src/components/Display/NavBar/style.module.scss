@@ -334,9 +334,15 @@ $second-text-color: #ffa300;
   width: 40%;
 
   a {
+    color: $primary-text-color;
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
+
+    &:hover {
+      color: $primary-text-color;
+      text-decoration: none;
+    }
   }
 }
 
@@ -393,11 +399,61 @@ $second-text-color: #ffa300;
   border: 1px solid transparent;
   padding: 6px 12px;
   font-size: 14px;
+  transition: transform 0.3s ease;
 }
 
-// .dropdownToggle:hover span {
-//   transform: rotate(180deg);
-// }
+.arrow {
+  margin-left: 10px;
+  border: solid $second-text-color;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+
+.dropdownBtn:hover .arrow {
+  transform: rotate(225deg);
+}
+
+.dropdownContent {
+  width: 250px;
+  position: absolute;
+  z-index: 17;
+  padding: 0;
+  background-color: #1f2635;
+  top: 56px;
+  box-shadow: unset;
+  border: 0;
+  display: none;
+
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+.dropdownBtn:hover + .dropdownContent {
+  display: block;
+}
+
+.dropdownItem {
+  padding: 10px;
+}
+
+.dropdownLabel {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.dropdownIcon {
+  font-size: 24px;
+  color: #b3b3b3;
+  margin-right: 20px;
+}
+
+.dropdownInput {
+  display: none;
+}
 
 .searchSectionDivider {
   border-right: 1px solid #3f5277;
@@ -433,41 +489,6 @@ $second-text-color: #ffa300;
   font-size: 18px;
 }
 
-.dropdownContent {
-  width: 250px;
-  position: absolute;
-  z-index: 17;
-  padding: 0;
-  background-color: #1f2635;
-  top: 56px;
-  box-shadow: unset;
-  border: 0;
-
-  ul {
-    margin-bottom: 0;
-  }
-}
-
-.dropdownItem {
-  padding: 10px;
-}
-
-.dropdownLabel {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-}
-
-.dropdownIcon {
-  font-size: 24px;
-  color: #b3b3b3;
-  margin-right: 20px;
-}
-
-.dropdownInput {
-  display: none;
-}
-
 /*---------- Account ----------*/
 
 .accountSection {
@@ -481,6 +502,10 @@ $second-text-color: #ffa300;
 .btnLogin {
   color: $second-text-color;
   margin-right: 20px;
+
+  &:hover {
+    color: $second-text-color;
+  }
 }
 
 .btnSignup {
@@ -491,4 +516,11 @@ $second-text-color: #ffa300;
   color: #141922;
   font-size: 14px;
   padding: 10px 20px;
+  text-decoration: none;
+
+  &:hover {
+    color: #141922;
+    text-decoration: none;
+    box-shadow: rgba(255, 255, 255, 0.4) 0 -4px 4px inset;
+  }
 }

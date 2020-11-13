@@ -160,7 +160,7 @@ function _NavBar() {
       <div className={Style.outerWrapper}>
         <div className={Style.innerWrapper}>
           <div className={Style.logoSection}>
-            <a>
+            <a href="#">
               <img
                 src="favicon.ico"
                 alt="GonnaBuy"
@@ -177,7 +177,7 @@ function _NavBar() {
                     ' '
                   )}
                 >
-                  Games<span> ▾ </span>
+                  Games<span className={Style.arrow}></span>
                 </label>
                 <div className={Style.dropdownContent}>
                   <ul>
