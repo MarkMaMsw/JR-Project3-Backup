@@ -14,6 +14,7 @@ import AdminLogin from './pages/Admin/AdminLogin';
 import CategoryManagement from './pages/Admin/CategoryManagement';
 import OrderManagement from './pages/Admin/OrderManagement';
 import ProductManagement from './pages/Admin/ProductManagement';
+import UserDashboard from './pages/Admin/UserDashboard/UserDashboard'
 
 import Example from './pages/Example/';
 
@@ -45,6 +46,7 @@ function App() {
         {/* Example */}
         <Route path="/example" component={Example} /> {/* 订单更新页*/}
         {/* Home should be putted last or the Route always porint to Home*/}
+        <Route path="/dashboard" component={UserDashboard} /> {/* Dashboard */}
         <Route path="/" component={Home} /> {/* Home*/}
       </Switch>
     </Router>
