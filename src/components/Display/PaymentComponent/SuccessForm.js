@@ -16,7 +16,7 @@ class _SuccessForm extends React.Component {
         return <div className={Style['payment__success']}>
             <div className={Style['payment__success--header']}>
                 <h1>Order Completed</h1>
-                <h2>Get ready to recieve your awesome shoes</h2>
+                <h2>Check your email now to see the product</h2>
             </div>
             <div className={Style['payment__success--footer']}>
                 <ul className={Style['payment__success--link']}>
