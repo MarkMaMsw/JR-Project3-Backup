@@ -4,6 +4,7 @@ import { Paper, Grid, Container } from '@material-ui/core';
 import { FootBar } from '../../../components/Display/FootBar';
 import { NavBar } from '../../../components/Display/NavBar';
 import SideBar from './SideBar';
+import MyOrders from './MyOrders';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,7 +31,7 @@ const UserDashBoard = () => {
                     <SideBar/>
                 </Grid>
                 <Grid item xs={12} sm={9}>
-                    <Paper className={classes.paper}>xs=12 sm=6</Paper>
+                    <MyOrders/>
                 </Grid>
             </Grid>
         </Container>

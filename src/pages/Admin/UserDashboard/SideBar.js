@@ -11,10 +11,11 @@ import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
     maxWidth: 360,
     backgroundColor: '#141922',
-    color: '#fff'
+    color: '#fff',
+    width: '290px',
+    marginTop: '10px'
   },
   icon: {
       color: '#FFA300',
