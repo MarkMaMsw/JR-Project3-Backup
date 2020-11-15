@@ -13,14 +13,14 @@ class DeliverForm extends React.Component {
             <h2 className={Style["payment__delivery--header"]}>RuneScape - Old School-Main OSRS Server</h2>
             <div className={Style["payment__delivery--message"]}>
                 <h3 className={Style["payment__delivery--label"]}>Deliver Instructions</h3>
-                <DeliverFormField
+                {/* <DeliverFormField
                 name="charactername"
                 value={charactername}
                 onChange={handleChange}
                 type="text"
                 placeholder="Your game character name..."
                 required
-                />
+                /> */}
                 <DeliveryFormTextarea
                 name="deliverymessage"
                 value={deliverymessage}
