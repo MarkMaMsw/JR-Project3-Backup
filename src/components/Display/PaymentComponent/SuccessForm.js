@@ -18,7 +18,7 @@ class _SuccessForm extends React.Component {
                 <h1>Order Completed</h1>
                 <h2>Check your email now to see the product</h2>
             </div>
-            {/* <div className={Style['payment__success--footer']}>
+            <div className={Style['payment__success--footer']}>
                 <ul className={Style['payment__success--link']}>
                     <li onClick={() => this.successGoTo()}><a href="#">Shop more</a></li>
                     <li>or</li>
@@ -27,7 +27,7 @@ class _SuccessForm extends React.Component {
                 <div className={Style['payment__success--text']}>
                     <p>for easy shopping next time!</p>
                 </div>
-            </div> */}
+            </div>
         </div>
     }
 }

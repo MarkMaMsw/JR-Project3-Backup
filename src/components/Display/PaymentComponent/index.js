@@ -22,6 +22,7 @@ class PaymentComponent extends React.Component {
             country: '',
             region: '',
             address: '',
+            charactername: '',
             deliverymessage: '',
             nameOnCard: '',
             amount: '',
@@ -50,6 +51,7 @@ class PaymentComponent extends React.Component {
             fullname,
             phone, 
             email,
+            charactername,
             deliverymessage, 
             nameOnCard,
             isSubmitted } = this.state
@@ -58,6 +60,7 @@ class PaymentComponent extends React.Component {
             <div className={Style["payment__container"]}> 
                 <DeliveryForm
                 handleChange={this.handleChange}
+                charactername={charactername}
                 deliverymessage={deliverymessage}
                 />
                 <div className={Style["payment__panels"]}>
