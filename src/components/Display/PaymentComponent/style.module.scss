@@ -1,7 +1,9 @@
 $title-text-color:lighten(#A5A8B1, 20%);
 $label-text-color: #A5A8B1;
 $input-text-color: lighten(#A5A8B1, 25%);
-$background-color: #2E3749;
+$background-color: #2B3344;
+$delivery-bg-color: #1F2635;
+$header-color: #E59200;
 
 @mixin label() {
     display: block;
@@ -33,8 +35,14 @@ body {
 
 .payment {
     display: flex;
-    justify-content: space-evenly;
-    padding: 3em 0;    
+    justify-content: center;
+    padding: 3em 0;  
+}
+
+.payment__container {
+    width: 65%;
+    display: flex;
+    justify-content: center;
 }
 
 .payment__cart {
@@ -45,27 +53,28 @@ body {
     justify-content: space-between;
 }
 
-.payment__subtotal--container {
+.payment__total--container {
     display: flex;
     justify-content: flex-end;
+    margin-top: 3em;
 }
 
-.payment__subtotal--content {
+.payment__total--content {
     padding: 0.7em 1.2em;
-    margin-right: 1.2em;
     text-align: center;
     right: 0px;
     bottom: 0px;
     h2 {
-        font-size: 1.5em;
+        font-size: 1.2em;
         text-transform: uppercase;
-        color: $label-text-color;
+        color: $title-text-color;
         font-family: Arial, Helvetica, sans-serif;
     }
     p {
         font-size: 2.1em;
-        font-weight: 600;
+        font-weight: 500;
         font-family: Arial, Helvetica, sans-serif;
+        color: $title-text-color;
     }
 }
 
@@ -76,18 +85,75 @@ body {
     margin-bottom: 1.5em;
 }
 
-.payment__panels {
+.payment__delivery {
+    width: 55%;
+    padding: 3em 3.5em; 
+    background-color: $delivery-bg-color;
     display: flex;
-    justify-content: space-around;
-    width: 48%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.payment__delivery--header {
+    color: $header-color;
+    font-weight: 400;
+    font-size: 1.25em;
+    letter-spacing: 0.5px;
+    margin-bottom: 3em;
+}
+
+.payment__delivery--label{
+    color: $label-text-color;
+    font-weight: 400;
+    font-size: 1.05em;
+} 
+
+.payment__delivery--detail {
+    margin-top: 2em;    
+    input {
+        width: 100%;
+        @include input();
+        font-size: 1.1em;
+        border: none;
+        padding: 0.4em;
+    }
+    textarea {
+        width: 100%;
+        @include input();
+        font-size: 1.1em;
+        border: none;
+        padding: 0.4em;
+        height: 120px;
+    }
+}
+
+.payment__delivery--notice {
+    color: $title-text-color;
+}
+
+.payment__delivery--notice {
+    margin-top: 2em;
+}
+
+.payment__delivery--first-para {
+    margin-top: 1.5em;
+    p {
+        margin: 0;
+    }
+}
+
+.payment__delivery--second-para {
+    margin-top: 1.5em;
+}
+
+.payment__panels {
+    width: 45%;
 }
 
 .payment__checkout-panel {
     background-color: $background-color;
-    width: 45%;
     padding: 3em 3.5em;
-    border-radius: 10px;
-    box-shadow: 0px 9px 9px #2E3749;
+    height: 100%;
 }
 
 .payment__title {
@@ -136,13 +202,11 @@ body {
 }
 
 .payment__success {
-    width: 60%;
-    border-radius: 10px;
+    height: 100%;
     background-color: $background-color;
     color: $title-text-color;
     padding: 7em 5em;
     text-align: center;
-    box-shadow: 0px 9px 9px #2E3749;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -198,8 +262,9 @@ body {
 }
 
 @media screen and (max-width: 1270px) {
-    .payment {
-        display: block;
+
+    .payment__container {
+        width: 100%;
     }
 
     .payment__cart {
@@ -207,21 +272,12 @@ body {
         margin: 3em auto;
     }
 
-    .payment__panels {
-        justify-content: space-between;
-        width: 90%;
-        margin: 0 auto;
-    }
-
     .payment__success {
-        width: 90%;
-        margin: 0 auto;
-        height: 500px;
         padding: 4.5em 2.5em;
     }
 
     .payment__success--link {
-        width: 55%;
+        width: 85%;
     }
 
     .payment__success--header {
@@ -260,87 +316,115 @@ body {
     }
 }
 
-@media screen and (max-width: 750px) {
-    .payment__panels {
-        display: block;
-        width: 90%;
-    }
+@media screen and (max-width: 768px) {
 
     .payment__cart {
         width: 90%;
         margin: 3em auto;
     }
 
-    .payment__checkout-panel {
-        padding: 1em 1.5em;
-        margin: 3em auto;
-        width: 95%;
+    .payment__container {
+        display: block;
+        width: 90%;
     }
 
-    .payment__title {
-        font-size: 1.4em;
+    .payment__panels {
+        width: 100%;
     }
 
-    .payment__detail {
-        label {
-            font-size: 0.9em;
-        }
-        input {
-            font-size: 1.0em;
-        }
-    }
-
-    .payment__region {
-        label {
-            font-size: 0.9em;
-        }
-        select {
-            font-size: 0.8em;
-        }
-    }
-
-    .payment__checkout-button {
-        font-size: 0.8em;
+    .payment__delivery {
+        margin-bottom: 3em;
+        width: 100%;
     }
 
     .payment__cart--title {
         font-size: 1.2em;
     }
 
-    .payment__subtotal--content {
-        margin-right: 0.4em;
+    .payment__total--content {
         h2 {
-            font-size: 0.9em;
+            font-size: 1.2em;
         }
         p {
-            font-size: 1.2em;
+            font-size: 1.5em;
         }
     }
 
     .payment__success {
-        padding: 2.5em 1.4em;
-        width: 95%;
-        margin: 0 auto;
-        height: 240px;
+        width: 100%;
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .payment__delivery {
+        padding: 1.5em 1.8em;
     }
 
-    .payment__success--link {
-        width: 85%;
-        font-size: 0.85em;
-        margin-bottom: 0em;
+    .payment__delivery--header {
+        font-size: 0.8em;
     }
 
-    .payment__success--text {
-        font-size: 0.85em;
+    .payment__delivery--label {
+        font-size: 0.7em;
+    }
+
+    .payment__delivery--detail {
+        margin-top: 1em;
+        input {
+            font-size: 0.80em;
+        }
+
+        textarea {
+            font-size: 0.80em;
+        }
+    }
+
+    .payment__delivery--notice {
+        h3 {
+            font-size: 1.2em;
+        }
+        p {
+            font-size: 0.8em;
+        }
+    }
+
+    .payment__checkout-panel {
+        padding: 1.5em 1.8em;
+    }
+
+    .payment__title {
+        font-size: 1.2em;
+        margin-bottom: 1.5em;
+    }
+
+    .payment__detail {
+        label {
+            font-size: 1em;
+        }
+        input {
+            font-size: 0.8em;
+        }
+    }
+
+    .payment__card-label {
+        font-size: 1em;
     }
 
     .payment__success--header {
         h1 {
-            font-size: 1.05em;
-            margin-bottom: 0.35em;
+            font-size: 1.5em;
         }
         h2 {
-            font-size: 0.85em;
+            font-size: 1.3em;
         }
+    }
+
+    .payment__success--link {
+        font-size: 1.05em;
+    }
+
+    .payment__success--text {
+        font-size: 1em;
     }
 }

@@ -49,7 +49,7 @@ const CardInfoField = ({ price, onSuccessfulCheckout }) => {
             <CardElement options={cardElementOption} />
         </div>
         <div className={Style["payment__checkout-button"]}>
-            <CheckoutButton buttonStyle="background-color: #4F73E6"/>
+            <CheckoutButton buttonStyle="background-color: #E59200"/>
         </div>
     </form>
 }
