@@ -1,0 +1,64 @@
+$background-color: #141922;
+$text-color: #b3b3b3;
+$border-color: #343a40;
+$angle-color: #ffa300;
+
+.setting {
+    background-color: $background-color;
+    color: #fff;
+    padding: 4em 0;
+    min-height: 900px;
+}
+
+.setting__container {
+    width: 450px;
+    margin: 0 auto;
+}
+
+.setting__center--title{
+    text-align: center;
+    font-size: 2.1em;
+    font-weight: 600;
+    margin-bottom: 1.8em;
+}
+
+.setting__items {
+    margin-bottom: 5em;
+}
+
+.setting__item {
+    width: 100%;
+    border: 0.8px solid $border-color;
+    color: $text-color;
+    padding: 0.8em 1.6em;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin-bottom: 0.9em;
+    background-color: $background-color;
+}
+
+.setting__item:hover {
+    border: 1px solid $angle-color;
+}
+
+.setting__item--info {
+    display: flex;
+    font-size: 1em;
+    margin: auto 0;
+}
+
+.setting__item--icon {
+    margin-right: 1em;
+}
+
+.setting__item--angle {
+    color: $angle-color;
+}
+
+@media screen and (max-width: 500px) {
+    .setting__container {
+        width: 100%;
+    }
+}
+

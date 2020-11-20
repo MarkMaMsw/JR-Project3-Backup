@@ -8,6 +8,7 @@ import Payment from './pages/User/Payment';
 import Product from './pages/User/Product';
 import SignUp from './pages/User/SignUp';
 import UserInfo from './pages/User/UserInfo';
+import AccountSetting from './pages/User/AccountSetting'
 
 import AdminHome from './pages/Admin/AdminHome';
 import AdminLogin from './pages/Admin/AdminLogin';
@@ -29,6 +30,7 @@ function App() {
         <Route path="/signup" component={SignUp} /> {/* 注册页*/}
         <Route path="/category" component={Category} /> {/* 分类页*/}
         <Route path="/product" component={Product} />{' '}
+        <Route path="/accountsetting" component={AccountSetting}/>
         {/* 产品页（具体商品展示）*/}
         <Route path="/payment" component={Payment} /> {/* 购物车账单与付款页*/}
         <Route path="/userinfo" component={UserInfo} /> {/* 用户信息页*/}
