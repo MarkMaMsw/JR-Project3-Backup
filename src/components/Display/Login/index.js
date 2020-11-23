@@ -23,17 +23,15 @@ class Login extends React.Component {
         return <>
             <div className={Style.signIn}>
                 <div className={Style.signInContainer}>
+                    <span>New Here?<br/><br/>
+                    Click  &nbsp;
+                    <a href="/signup" className={Style.signUpLink}>
+                        here
+                    </a>
+                    &nbsp;to sign up.
+                    </span>
                     <form>
-                        <span>New Here?</span>
-                        <div className={Style.signUpLink}>
-                            
-                            <Link to="/signup"><button>
-                                I want to BUY
-                            </button></Link>
-                            <Link to="/signup"><button>
-                                I want to SELL
-                            </button></Link>
-                        </div>
+                        <h1> Log In</h1>
                         <div className={Style.signInForm}>
                             <input
                                 type="text"
@@ -55,13 +53,9 @@ class Login extends React.Component {
                                 value={this.state.value}
                                 onChange={this.handleChange}
                                 />
-                            <button type="submit">LOG IN</button>
-                            <div className={Style.textRight}>
-                                <a href="/signup">Forgot password?</a>
-                            </div>
-                            
+                            <button className={Style.buttonLogin} type="submit">LOG IN</button>          
                         </div>
-                        
+                        <p><a href="/signup">Forgot password?</a></p>
                     </form>
                 </div>
             </div>

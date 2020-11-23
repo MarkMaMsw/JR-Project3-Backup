@@ -8,6 +8,7 @@ import Payment from "./pages/User/Payment";
 import Product from "./pages/User/Product";
 import SignUp from "./pages/User/SignUp";
 import UserInfo from "./pages/User/UserInfo";
+import GameIndex from "./pages/User/GameIndex";
 
 import AdminHome from "./pages/Admin/AdminHome";
 import AdminLogin from "./pages/Admin/AdminLogin";
@@ -34,6 +35,7 @@ function App() {
         <Route path="/payment" component={Payment} /> {/* 购物车账单与付款页*/}
         <Route path="/userinfo" component={UserInfo} /> {/* 用户信息页*/}
         <Route path="/order" component={Order} /> {/* 历史订单页*/}
+        <Route path="/gameindex" component={GameIndex} /> {/* 历史订单页*/}
 
         {/* Admin */}
         <Route path="/adminhome" component={AdminHome} /> {/* 管理员面板*/}

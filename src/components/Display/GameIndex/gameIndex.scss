@@ -1,0 +1,60 @@
+#root{
+    background-color: #141922;
+    
+}
+.gameIndexBackground{
+    position: relative;
+    top: 190px;
+    a{
+        &:link{
+            color: orange;
+        }
+        &:visited{
+            color: white;
+        }
+        &:hover{
+            color: white;
+        }
+        &:active{
+            color: white;
+        }
+    }
+    
+    .textCenter{
+        justify-content: center;
+    }
+    
+    .textWhite{
+        color: white;
+    }
+    .gameIndexRow{
+        position: sticky;
+        top: 0;
+    }
+    
+    .gameIndex{
+        background-color: #263044;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+
+    .gameIndexButton{
+        border-color: orange;
+        color: #141922;
+        background-color: orange;
+    }
+
+    .gameIndexButtonGroup{
+        border:none;
+        color: orange;
+        background-color: #263044;
+    }
+
+    .gameIndexHr{
+        width: 100%;
+        height: 2px;
+        color: gray;
+        background-color: gray;
+    }
+}

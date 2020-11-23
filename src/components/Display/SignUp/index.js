@@ -22,11 +22,14 @@ class SignUp extends React.Component {
 
     render() {
         return <>
-            <div className={Style.SignUp}>
+            <div className={Style.signUp}>
                 <div className={Style.signUpContainer}>
+                    <h1>Sign Up</h1>
+                    <div className={Style.loginLink}>
+                        <p>Already have an account?</p>
+                        <a href="/login" className={Style.loginP}>Log in</a>
+                    </div>
                     <form>
-                        <h1>Create Account</h1>
-                        <span>or use your email for regiestration</span>
                         <input
                             type="text"
                             placeholder="Name"
@@ -47,20 +50,44 @@ class SignUp extends React.Component {
                             value={this.state.value}
                             onChange={this.handleChange}
                             />
+                        <hr/>
+                        <div className={Style.inputGroup}>
+                            <input
+                                type="text"
+                                placeholder="FirstName"
+                                name="FirstName"
+                                value={this.state.value}
+                                onChange={this.handleChange}/>
+                            <input
+                                type="text"
+                                placeholder="LastName"
+                                name="LastName"
+                                value={this.state.value}
+                                onChange={this.handleChange}/>
+                        </div>
+                        <div className={Style.inputGroup}>
+                            <input
+                                type="text"
+                                placeholder="City"
+                                name="City"
+                                value={this.state.value}
+                                onChange={this.handleChange}/>
+                            <input
+                                type="text"
+                                placeholder="ZipCode"
+                                name="Zip Code"
+                                value={this.state.value}
+                                onChange={this.handleChange}/>
+                        </div>
+                        <input
+                            type="text"
+                            placeholder="Address"
+                            name="Address"
+                            value={this.state.value}
+                            onChange={this.handleChange}/>
                         <button type="submit">Sign Up</button>
                     </form>
-                </div>
-                <div className={Style.signUpLayer}>
-                        <h1>Hello, Friends!</h1>
-                        <p className={Style.signUpP}>
-                            If you have an account, please sign in.
-                        </p>
-                        <button
-                            type="primary"
-                            className={Style.ghost}
-                            id="signUp">
-                               <Link to="/login">Sign In</Link>
-                        </button>
+                    
                 </div>
             </div>
         </>
