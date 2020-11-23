@@ -21,34 +21,48 @@ class Login extends React.Component {
 
     render() {
         return <>
-            <div className={Style.SignIn}>
+            <div className={Style.signIn}>
                 <div className={Style.signInContainer}>
                     <form>
-                        <h1>Sign In</h1>
-                        <span>or use your account</span>
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            name="Email"
-                            value={this.state.value}
-                            onChange={this.handleChange}/>
-                        <input
-                            type="password"
-                            placeholder="Password"
-                            name="Password"
-                            value={this.state.value}
-                            onChange={this.handleChange}
+                        <span>New Here?</span>
+                        <div className={Style.signUpLink}>
+                            
+                            <Link to="/signup"><button>
+                                I want to BUY
+                            </button></Link>
+                            <Link to="/signup"><button>
+                                I want to SELL
+                            </button></Link>
+                        </div>
+                        <div className={Style.signInForm}>
+                            <input
+                                type="text"
+                                placeholder="Name"
+                                name="Name"
+                                value={this.state.value}
+                                onChange={this.handleChange}
                             />
-                        <button type="submit">Sign In</button>
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                name="Email"
+                                value={this.state.value}
+                                onChange={this.handleChange}/>
+                            <input
+                                type="password"
+                                placeholder="Password"
+                                name="Password"
+                                value={this.state.value}
+                                onChange={this.handleChange}
+                                />
+                            <button type="submit">LOG IN</button>
+                            <div className={Style.textRight}>
+                                <a href="/signup">Forgot password?</a>
+                            </div>
+                            
+                        </div>
+                        
                     </form>
-                </div>
-                <div className={Style.signInLayer}>
-                        <h1>Welcome back!</h1>
-                        <p className={Style.signInP}>
-                            Enter your personal details to sign up
-                        </p>
-                        <button className={Style.ghost}>
-                            <Link to="/signup">Sign Up</Link></button>
                 </div>
             </div>
         </>
